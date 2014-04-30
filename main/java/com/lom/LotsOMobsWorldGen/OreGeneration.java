@@ -1,0 +1,118 @@
+package com.lom.LotsOMobsWorldGen;
+
+import java.util.Random;
+
+import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.gen.feature.WorldGenMinable;
+
+import com.lom.LotsOMobsBiomes.BiomeGenAntartica;
+import com.lom.LotsOMobsBiomes.BiomeGenArcticOcean;
+import com.lom.LotsOMobsCore.ConfigDetails;
+import com.lom.LotsOMobsCore.LotsOMobs;
+
+import cpw.mods.fml.common.IWorldGenerator;
+
+public class OreGeneration implements IWorldGenerator 
+{
+	
+@Override
+public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) 
+{
+if(world.provider.dimensionId == -1)
+{
+	generateNether();
+}
+else if(world.provider.dimensionId == 0)
+{
+	generateSurface(world, random, chunkX*16, chunkZ*16);
+}
+else if(world.provider.dimensionId == 1)
+{
+	generateEnd();
+}
+else if(world.provider.dimensionId == ConfigDetails.dimension)
+{
+	generateDinoAge(world, random, chunkX*16, chunkZ*16);
+}/*
+else if(world.provider.dimensionId == ConfigDetails.dimension2)
+{
+	generateIceAge(world, random, chunkX*16, chunkZ*16);
+}*/
+}
+
+public void generateNether() {
+//we're not doing ore ore in the nether
+}
+
+public void generateSurface(World world, Random rand, int chunkX, int chunkZ) 
+{
+	BiomeGenBase biome = world.getWorldChunkManager().getBiomeGenAt(chunkX, chunkZ); 
+/*	
+    if(biome instanceof BiomeGenAntartica){
+	for (int i = 0; i < 7; i++) {
+	int randPosX = chunkX + rand.nextInt(16);
+	int randPosY = rand.nextInt(60);
+	int randPosZ = chunkZ + rand.nextInt(16);
+	(new WorldGenMinable(LotsOMobs.IceFossil, 10)).generate(world, rand,
+	randPosX, randPosY, randPosZ);
+	}}
+    if(biome instanceof BiomeGenAntartica){
+	for (int i = 0; i < 7; i++) {
+	int randPosX = chunkX + rand.nextInt(16);
+	int randPosY = rand.nextInt(60);
+	int randPosZ = chunkZ + rand.nextInt(16);
+	(new WorldGenMinable(LotsOMobs.IceStone, 10)).generate(world, rand,
+	randPosX, randPosY, randPosZ);
+	}}
+    if(biome instanceof BiomeGenArcticOcean){
+	for (int i = 0; i < 10; i++) {
+	int randPosX = chunkX + rand.nextInt(16);
+	int randPosY = rand.nextInt(60);
+	int randPosZ = chunkZ + rand.nextInt(16);
+	(new WorldGenMinable(LotsOMobs.IceStone, 10)).generate(world, rand,
+	randPosX, randPosY, randPosZ);
+	}}*/
+}
+
+public void generateEnd() {
+//we're not going to generate in the end either
+}
+public void generateDinoAge(World world, Random rand, int chunkX, int chunkZ) {
+		for (int i = 0; i < 7; i++) {
+		int randPosX = chunkX + rand.nextInt(16);
+		int randPosY = rand.nextInt(7);
+		int randPosZ = chunkZ + rand.nextInt(16);
+
+		(new WorldGenMinable(LotsOMobs.AmberOre, 10)).generate(world, rand,
+		randPosX, randPosY, randPosZ);
+		}
+	}/*
+public void generateIceAge(World world, Random rand, int chunkX, int chunkZ) {
+	for (int i = 0; i < 15; i++) {
+	int randPosX = chunkX + rand.nextInt(16);
+	int randPosY = rand.nextInt(128);
+	int randPosZ = chunkZ + rand.nextInt(16);
+
+	(new WorldGenMineableIce(LotsOMobs.IcemintuimOre.blockID, 10)).generate(world, rand,
+	randPosX, randPosY, randPosZ);
+	}
+	for (int i = 0; i < 15; i++) {
+	int randPosX = chunkX + rand.nextInt(16);
+	int randPosY = rand.nextInt(128);
+	int randPosZ = chunkZ + rand.nextInt(16);
+
+	(new WorldGenMineableIce(LotsOMobs.IceCoalOre.blockID, 10)).generate(world, rand,
+	randPosX, randPosY, randPosZ);
+	}
+	for (int i = 0; i < 15; i++) {
+	int randPosX = chunkX + rand.nextInt(16);
+	int randPosY = rand.nextInt(51);
+	int randPosZ = chunkZ + rand.nextInt(16);
+
+	(new WorldGenMineableIce(LotsOMobs.IceIronOre.blockID, 10)).generate(world, rand,
+	randPosX, randPosY, randPosZ);
+	}*/
+
+}
