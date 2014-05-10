@@ -1,10 +1,10 @@
-package com.lom.LotsOMobsIceAge;
+package com.lom.lotsomobsiceage;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import com.lom.LotsOMobsCore.LotsOMobs;
+import com.lom.lotsomobscore.LotsOMobs;
 
 import net.minecraft.world.ChunkPosition;
 import net.minecraft.world.World;

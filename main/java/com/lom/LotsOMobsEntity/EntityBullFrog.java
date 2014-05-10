@@ -1,4 +1,4 @@
-    package com.lom.LotsOMobsEntity;
+    package com.lom.lotsomobsentity;
 
     import net.minecraft.block.BlockColored;
 import net.minecraft.entity.Entity;
@@ -31,8 +31,8 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-import com.lom.LotsOMobsAI.EntityDigAI;
-import com.lom.LotsOMobsCore.LotsOMobs;
+import com.lom.lotsomobsai.EntityDigAI;
+import com.lom.lotsomobscore.LotsOMobs;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

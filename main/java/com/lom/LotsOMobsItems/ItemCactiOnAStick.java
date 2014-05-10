@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsItems;
+package com.lom.lotsomobsitems;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -6,8 +6,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import com.lom.LotsOMobsCore.LotsOMobs;
-import com.lom.LotsOMobsEntity.EntityCamel;
+import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsentity.EntityCamel;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

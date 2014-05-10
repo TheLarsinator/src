@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsWorldGen;
+package com.lom.lotsomobsworldgen;
 
 import java.util.Random;
 
@@ -6,7 +6,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 
-import com.lom.LotsOMobsCore.LotsOMobs;
+import com.lom.lotsomobscore.LotsOMobs;
 
 import cpw.mods.fml.common.IWorldGenerator;
 

@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsDino;
+package com.lom.lotsomobsdino;
 
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.GenLayerVoronoiZoom;

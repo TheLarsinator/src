@@ -1,5 +1,5 @@
-package com.lom.LotsOMobsItems;
-import com.lom.LotsOMobsCore.LotsOMobs;
+package com.lom.lotsomobsitems;
+import com.lom.lotsomobscore.LotsOMobs;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;

@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsEntity;
+package com.lom.lotsomobsentity;
 
 import java.util.List;
 import java.util.Random;

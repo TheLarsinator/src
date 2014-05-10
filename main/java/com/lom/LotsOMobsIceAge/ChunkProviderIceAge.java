@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsIceAge;
+package com.lom.lotsomobsiceage;
 
 import static net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.CAVE;
 import static net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.MINESHAFT;
@@ -14,7 +14,7 @@ import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.Ev
 import java.util.List;
 import java.util.Random;
 
-import com.lom.LotsOMobsCore.LotsOMobs;
+import com.lom.lotsomobscore.LotsOMobs;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFalling;

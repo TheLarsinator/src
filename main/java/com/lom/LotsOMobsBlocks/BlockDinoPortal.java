@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsBlocks;
+package com.lom.lotsomobsblocks;
 
 import java.util.Random;
 
@@ -19,9 +19,9 @@ import net.minecraft.util.Direction;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-import com.lom.LotsOMobsCore.ConfigDetails;
-import com.lom.LotsOMobsCore.LotsOMobs;
-import com.lom.LotsOMobsDino.TeleporterDino;
+import com.lom.lotsomobscore.ConfigDetails;
+import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsdino.TeleporterDino;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

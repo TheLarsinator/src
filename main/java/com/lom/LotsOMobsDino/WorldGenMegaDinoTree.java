@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsDino;
+package com.lom.lotsomobsdino;
 
 import java.util.Random;
 
@@ -8,7 +8,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenHugeTrees;
 
-import com.lom.LotsOMobsCore.LotsOMobs;
+import com.lom.lotsomobscore.LotsOMobs;
 
 public class WorldGenMegaDinoTree extends WorldGenHugeTrees
 {

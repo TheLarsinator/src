@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsDino;
+package com.lom.lotsomobsdino;
 import net.minecraft.util.ChunkCoordinates;
 public class DinoPortalPosition extends ChunkCoordinates
 {

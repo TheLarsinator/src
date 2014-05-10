@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsAI;
+package com.lom.lotsomobsai;
 
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.ai.EntityAIBase;

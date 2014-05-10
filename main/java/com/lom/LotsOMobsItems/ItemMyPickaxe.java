@@ -1,9 +1,9 @@
-package com.lom.LotsOMobsItems;
+package com.lom.lotsomobsitems;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPickaxe;
 
-import com.lom.LotsOMobsCore.LotsOMobs;
+import com.lom.lotsomobscore.LotsOMobs;
 
 public class ItemMyPickaxe extends ItemPickaxe
 {

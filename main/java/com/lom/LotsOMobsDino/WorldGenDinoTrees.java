@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsDino;
+package com.lom.lotsomobsdino;
 
 import java.util.Random;
 
@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraftforge.common.util.ForgeDirection;
 
-import com.lom.LotsOMobsCore.LotsOMobs;
+import com.lom.lotsomobscore.LotsOMobs;
 
 public class WorldGenDinoTrees extends WorldGenAbstractTree
 {

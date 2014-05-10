@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsRender;
+package com.lom.lotsomobsrender;
 
 import java.util.Random;
 
@@ -8,8 +8,8 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.util.ResourceLocation;
 
-import com.lom.LotsOMobsCore.LotsOMobs;
-import com.lom.LotsOMobsEntity.EntitySquirrel;
+import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsentity.EntitySquirrel;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

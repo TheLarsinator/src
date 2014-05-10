@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsCrops;
+package com.lom.lotsomobscrops;
 
 import java.util.Date;
 
@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 import scala.util.Random;
 
 import com.ibm.icu.util.Calendar;
-import com.lom.LotsOMobsCore.LotsOMobs;
+import com.lom.lotsomobscore.LotsOMobs;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

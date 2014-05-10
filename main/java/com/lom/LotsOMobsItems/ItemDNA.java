@@ -1,8 +1,8 @@
-package com.lom.LotsOMobsItems;
+package com.lom.lotsomobsitems;
 
 import net.minecraft.item.Item;
 
-import com.lom.LotsOMobsCore.LotsOMobs;
+import com.lom.lotsomobscore.LotsOMobs;
 
 public class ItemDNA extends Item
 {

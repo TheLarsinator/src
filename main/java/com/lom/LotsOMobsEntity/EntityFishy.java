@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsEntity;
+package com.lom.lotsomobsentity;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.SharedMonsterAttributes;

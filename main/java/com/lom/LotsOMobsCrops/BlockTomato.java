@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsCrops;
+package com.lom.lotsomobscrops;
 
 import javax.swing.Icon;
 
@@ -10,7 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
-import com.lom.LotsOMobsCore.LotsOMobs;
+import com.lom.lotsomobscore.LotsOMobs;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsRender;
+package com.lom.lotsomobsrender;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
@@ -9,8 +9,8 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import com.lom.LotsOMobsCore.LotsOMobs;
-import com.lom.LotsOMobsEntity.EntityLizard;
+import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsentity.EntityLizard;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsEntity;
+package com.lom.lotsomobsentity;
 
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -15,8 +15,8 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
-import com.lom.LotsOMobsAI.EntityAIHop;
-import com.lom.LotsOMobsCore.LotsOMobs;
+import com.lom.lotsomobsai.EntityAIHop;
+import com.lom.lotsomobscore.LotsOMobs;
 
 public class EntityFrog extends EntityAgeableMob implements IMob {
 	public float field_70813_a;

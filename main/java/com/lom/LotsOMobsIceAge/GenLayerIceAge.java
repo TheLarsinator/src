@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsIceAge;
+package com.lom.lotsomobsiceage;
 
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.GenLayerVoronoiZoom;

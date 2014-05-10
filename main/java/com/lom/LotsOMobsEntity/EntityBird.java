@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsEntity;
+package com.lom.lotsomobsentity;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityFlying;

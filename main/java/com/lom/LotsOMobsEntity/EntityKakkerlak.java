@@ -1,6 +1,6 @@
-package com.lom.LotsOMobsEntity;
+package com.lom.lotsomobsentity;
 
-import com.lom.LotsOMobsCore.LotsOMobs;
+import com.lom.lotsomobscore.LotsOMobs;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockColored;

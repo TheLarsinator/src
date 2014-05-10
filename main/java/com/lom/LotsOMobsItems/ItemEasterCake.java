@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsItems;
+package com.lom.lotsomobsitems;
 
 import java.util.List;
 

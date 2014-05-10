@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsBiomes;
+package com.lom.lotsomobsbiomes;
 
 import java.util.Random;
 
@@ -7,11 +7,11 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.BiomeGenBase.FlowerEntry;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 
-import com.lom.LotsOMobsCore.LotsOMobs;
-import com.lom.LotsOMobsDino.WorldGenBigDinoTree;
-import com.lom.LotsOMobsDino.WorldGenDinoShrub;
-import com.lom.LotsOMobsDino.WorldGenDinoTrees;
-import com.lom.LotsOMobsDino.WorldGenMegaDinoTree;
+import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsdino.WorldGenBigDinoTree;
+import com.lom.lotsomobsdino.WorldGenDinoShrub;
+import com.lom.lotsomobsdino.WorldGenDinoTrees;
+import com.lom.lotsomobsdino.WorldGenMegaDinoTree;
 
 public class BiomeGenDinoJungle extends BiomeGenBase 
 {

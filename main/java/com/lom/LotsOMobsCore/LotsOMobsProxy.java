@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsCore;
+package com.lom.lotsomobscore;
 
 import net.minecraftforge.client.MinecraftForgeClient;
 

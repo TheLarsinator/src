@@ -1,9 +1,9 @@
-package com.lom.LotsOMobsBlocks;
+package com.lom.lotsomobsblocks;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-import com.lom.LotsOMobsCore.LotsOMobs;
+import com.lom.lotsomobscore.LotsOMobs;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeavesBase;

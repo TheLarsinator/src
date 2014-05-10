@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsDino;
+package com.lom.lotsomobsdino;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -13,7 +13,7 @@ import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.Teleporter;
 import net.minecraft.world.WorldServer;
 
-import com.lom.LotsOMobsCore.LotsOMobs;
+import com.lom.lotsomobscore.LotsOMobs;
 public class TeleporterDino extends Teleporter
 {
 private final WorldServer worldServerInstance;

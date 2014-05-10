@@ -1,10 +1,10 @@
-package com.lom.LotsOMobsTabs;
+package com.lom.lotsomobstabs;
 
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-import com.lom.LotsOMobsCore.LotsOMobs;
+import com.lom.lotsomobscore.LotsOMobs;
 
 public class MyCombatTab extends CreativeTabs
 {

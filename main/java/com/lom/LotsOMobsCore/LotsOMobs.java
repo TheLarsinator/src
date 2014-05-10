@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsCore;
+package com.lom.lotsomobscore;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -13,9 +13,10 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
+import net.minecraft.stats.Achievement;
 import net.minecraft.util.WeightedRandomChestContent;
-import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.common.AchievementPage;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeDictionary.Type;
 import net.minecraftforge.common.BiomeManager;
@@ -25,99 +26,106 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.util.EnumHelper;
 
-import com.lom.LotsOMobsBiomes.BiomeGenAntartica;
-import com.lom.LotsOMobsBiomes.BiomeGenArcticOcean;
-import com.lom.LotsOMobsBiomes.BiomeGenDinoIslands;
-import com.lom.LotsOMobsBiomes.BiomeGenDinoJungle;
-import com.lom.LotsOMobsBiomes.BiomeGenDinoMountains;
-import com.lom.LotsOMobsBiomes.BiomeGenDinoOcean;
-import com.lom.LotsOMobsBiomes.BiomeGenDinoPlains;
-import com.lom.LotsOMobsBiomes.BiomeGenIceIslands;
-import com.lom.LotsOMobsBiomes.BiomeGenIceMountains;
-import com.lom.LotsOMobsBiomes.BiomeGenIceOcean;
-import com.lom.LotsOMobsBiomes.BiomeGenIcePlains;
-import com.lom.LotsOMobsBlocks.BlockAmberOre;
-import com.lom.LotsOMobsBlocks.BlockAncientFire;
-import com.lom.LotsOMobsBlocks.BlockDinoLeaves;
-import com.lom.LotsOMobsBlocks.BlockDinoLog;
-import com.lom.LotsOMobsBlocks.BlockDinoPortal;
-import com.lom.LotsOMobsBlocks.BlockDinoWoodPlanks;
-import com.lom.LotsOMobsBlocks.BlockDinoWoodStairs;
-import com.lom.LotsOMobsBlocks.BlockEasterCake;
-import com.lom.LotsOMobsBlocks.BlockEasterEgg;
-import com.lom.LotsOMobsBlocks.BlockFossilOre;
-import com.lom.LotsOMobsBlocks.BlockIceCobble;
-import com.lom.LotsOMobsBlocks.BlockIcePortal;
-import com.lom.LotsOMobsBlocks.BlockIceStone;
-import com.lom.LotsOMobsBlocks.BlockMyFlower;
-import com.lom.LotsOMobsCrops.BlockPineApple;
-import com.lom.LotsOMobsCrops.BlockTomato;
-import com.lom.LotsOMobsCrops.ItemMyFoodSeed;
-import com.lom.LotsOMobsDino.WorldProviderDino;
-import com.lom.LotsOMobsEntity.EntityAnt;
-import com.lom.LotsOMobsEntity.EntityBear;
-import com.lom.LotsOMobsEntity.EntityBee;
-import com.lom.LotsOMobsEntity.EntityBird;
-import com.lom.LotsOMobsEntity.EntityBoar;
-import com.lom.LotsOMobsEntity.EntityBrontosaurus;
-import com.lom.LotsOMobsEntity.EntityBullFrog;
-import com.lom.LotsOMobsEntity.EntityBunny;
-import com.lom.LotsOMobsEntity.EntityButterfly;
-import com.lom.LotsOMobsEntity.EntityCamel;
-import com.lom.LotsOMobsEntity.EntityCroco;
-import com.lom.LotsOMobsEntity.EntityDeer;
-import com.lom.LotsOMobsEntity.EntityEasterBunny;
-import com.lom.LotsOMobsEntity.EntityEasterChick;
-import com.lom.LotsOMobsEntity.EntityElephant;
-import com.lom.LotsOMobsEntity.EntityFireFly;
-import com.lom.LotsOMobsEntity.EntityFishy;
-import com.lom.LotsOMobsEntity.EntityFly;
-import com.lom.LotsOMobsEntity.EntityFrog;
-import com.lom.LotsOMobsEntity.EntityGekko;
-import com.lom.LotsOMobsEntity.EntityGiraffe;
-import com.lom.LotsOMobsEntity.EntityGoat;
-import com.lom.LotsOMobsEntity.EntityGorilla;
-import com.lom.LotsOMobsEntity.EntityHermitCrab;
-import com.lom.LotsOMobsEntity.EntityIchtyosaurus;
-import com.lom.LotsOMobsEntity.EntityKakkerlak;
-import com.lom.LotsOMobsEntity.EntityLion;
-import com.lom.LotsOMobsEntity.EntityLizard;
-import com.lom.LotsOMobsEntity.EntityNarwal;
-import com.lom.LotsOMobsEntity.EntityPDFrog;
-import com.lom.LotsOMobsEntity.EntityPenguin;
-import com.lom.LotsOMobsEntity.EntityPolarBear;
-import com.lom.LotsOMobsEntity.EntityPterosaurus;
-import com.lom.LotsOMobsEntity.EntityRaptor;
-import com.lom.LotsOMobsEntity.EntitySanta;
-import com.lom.LotsOMobsEntity.EntityShell;
-import com.lom.LotsOMobsEntity.EntitySnake;
-import com.lom.LotsOMobsEntity.EntitySquirrel;
-import com.lom.LotsOMobsEntity.EntityTRex;
-import com.lom.LotsOMobsEntity.EntityTriceratops;
-import com.lom.LotsOMobsEntity.EntityTropicalFishy;
-import com.lom.LotsOMobsEntity.EntityTurtle;
-import com.lom.LotsOMobsEntity.EntityVulture;
-import com.lom.LotsOMobsEntity.EntityWhale;
-import com.lom.LotsOMobsEntity.EntityWinterDeer;
-import com.lom.LotsOMobsEntity.EntityWorm;
-import com.lom.LotsOMobsIceAge.WorldProviderIceAge;
-import com.lom.LotsOMobsItems.ItemCactiOnAStick;
-import com.lom.LotsOMobsItems.ItemDNA;
-import com.lom.LotsOMobsItems.ItemEasterCake;
-import com.lom.LotsOMobsItems.ItemFlintAndFossil;
-import com.lom.LotsOMobsItems.ItemMaterials;
-import com.lom.LotsOMobsItems.ItemMyAxe;
-import com.lom.LotsOMobsItems.ItemMyPickaxe;
-import com.lom.LotsOMobsItems.ItemMyShovel;
-import com.lom.LotsOMobsItems.ItemPortalPlacer;
-import com.lom.LotsOMobsItems.ItemTimeTraveler;
-import com.lom.LotsOMobsItems.MyFood;
-import com.lom.LotsOMobsTabs.MyBlockTab;
-import com.lom.LotsOMobsTabs.MyCombatTab;
-import com.lom.LotsOMobsTabs.MyItemsTab;
-import com.lom.LotsOMobsWorldGen.FossilOreGeneration;
-import com.lom.LotsOMobsWorldGen.OreGeneration;
+import com.lom.lotsomobsachievement.LotsOMobsAchievements;
+import com.lom.lotsomobsbiomes.BiomeGenAntartica;
+import com.lom.lotsomobsbiomes.BiomeGenArcticOcean;
+import com.lom.lotsomobsbiomes.BiomeGenDinoIslands;
+import com.lom.lotsomobsbiomes.BiomeGenDinoJungle;
+import com.lom.lotsomobsbiomes.BiomeGenDinoMountains;
+import com.lom.lotsomobsbiomes.BiomeGenDinoOcean;
+import com.lom.lotsomobsbiomes.BiomeGenDinoPlains;
+import com.lom.lotsomobsbiomes.BiomeGenIceIslands;
+import com.lom.lotsomobsbiomes.BiomeGenIceMountains;
+import com.lom.lotsomobsbiomes.BiomeGenIceOcean;
+import com.lom.lotsomobsbiomes.BiomeGenIcePlains;
+import com.lom.lotsomobsblocks.BlockAmberOre;
+import com.lom.lotsomobsblocks.BlockAncientFire;
+import com.lom.lotsomobsblocks.BlockDinoLeaves;
+import com.lom.lotsomobsblocks.BlockDinoLog;
+import com.lom.lotsomobsblocks.BlockDinoPortal;
+import com.lom.lotsomobsblocks.BlockDinoWoodPlanks;
+import com.lom.lotsomobsblocks.BlockDinoWoodStairs;
+import com.lom.lotsomobsblocks.BlockEasterCake;
+import com.lom.lotsomobsblocks.BlockEasterEgg;
+import com.lom.lotsomobsblocks.BlockFossilOre;
+import com.lom.lotsomobsblocks.BlockIceCoal;
+import com.lom.lotsomobsblocks.BlockIceCobble;
+import com.lom.lotsomobsblocks.BlockIceIron;
+import com.lom.lotsomobsblocks.BlockIcePortal;
+import com.lom.lotsomobsblocks.BlockIceStone;
+import com.lom.lotsomobsblocks.BlockIcemintuimOre;
+import com.lom.lotsomobsblocks.BlockMyFlower;
+import com.lom.lotsomobscrops.BlockPineApple;
+import com.lom.lotsomobscrops.BlockTomato;
+import com.lom.lotsomobscrops.ItemMyFoodSeed;
+import com.lom.lotsomobsdino.WorldProviderDino;
+import com.lom.lotsomobsentity.EntityAnt;
+import com.lom.lotsomobsentity.EntityBear;
+import com.lom.lotsomobsentity.EntityBee;
+import com.lom.lotsomobsentity.EntityBird;
+import com.lom.lotsomobsentity.EntityBoar;
+import com.lom.lotsomobsentity.EntityBrontosaurus;
+import com.lom.lotsomobsentity.EntityBullFrog;
+import com.lom.lotsomobsentity.EntityBunny;
+import com.lom.lotsomobsentity.EntityButterfly;
+import com.lom.lotsomobsentity.EntityCamel;
+import com.lom.lotsomobsentity.EntityCroco;
+import com.lom.lotsomobsentity.EntityDeer;
+import com.lom.lotsomobsentity.EntityEasterBunny;
+import com.lom.lotsomobsentity.EntityEasterChick;
+import com.lom.lotsomobsentity.EntityElephant;
+import com.lom.lotsomobsentity.EntityFireFly;
+import com.lom.lotsomobsentity.EntityFishy;
+import com.lom.lotsomobsentity.EntityFly;
+import com.lom.lotsomobsentity.EntityFrog;
+import com.lom.lotsomobsentity.EntityGekko;
+import com.lom.lotsomobsentity.EntityGiraffe;
+import com.lom.lotsomobsentity.EntityGoat;
+import com.lom.lotsomobsentity.EntityGorilla;
+import com.lom.lotsomobsentity.EntityHermitCrab;
+import com.lom.lotsomobsentity.EntityIchtyosaurus;
+import com.lom.lotsomobsentity.EntityKakkerlak;
+import com.lom.lotsomobsentity.EntityLion;
+import com.lom.lotsomobsentity.EntityLizard;
+import com.lom.lotsomobsentity.EntityMammoth;
+import com.lom.lotsomobsentity.EntityMuskOx;
+import com.lom.lotsomobsentity.EntityNarwal;
+import com.lom.lotsomobsentity.EntityPDFrog;
+import com.lom.lotsomobsentity.EntityPenguin;
+import com.lom.lotsomobsentity.EntityPolarBear;
+import com.lom.lotsomobsentity.EntityPterosaurus;
+import com.lom.lotsomobsentity.EntityRaptor;
+import com.lom.lotsomobsentity.EntitySaberTooth;
+import com.lom.lotsomobsentity.EntitySanta;
+import com.lom.lotsomobsentity.EntityShell;
+import com.lom.lotsomobsentity.EntitySnake;
+import com.lom.lotsomobsentity.EntitySquirrel;
+import com.lom.lotsomobsentity.EntityTRex;
+import com.lom.lotsomobsentity.EntityTriceratops;
+import com.lom.lotsomobsentity.EntityTropicalFishy;
+import com.lom.lotsomobsentity.EntityTurtle;
+import com.lom.lotsomobsentity.EntityVulture;
+import com.lom.lotsomobsentity.EntityWhale;
+import com.lom.lotsomobsentity.EntityWinterDeer;
+import com.lom.lotsomobsentity.EntityWorm;
+import com.lom.lotsomobsiceage.WorldProviderIceAge;
+import com.lom.lotsomobsitems.ItemCactiOnAStick;
+import com.lom.lotsomobsitems.ItemDNA;
+import com.lom.lotsomobsitems.ItemEasterCake;
+import com.lom.lotsomobsitems.ItemFlintAndFossil;
+import com.lom.lotsomobsitems.ItemMaterials;
+import com.lom.lotsomobsitems.ItemMyAxe;
+import com.lom.lotsomobsitems.ItemMyPickaxe;
+import com.lom.lotsomobsitems.ItemMyShovel;
+import com.lom.lotsomobsitems.ItemTimeTraveler;
+import com.lom.lotsomobsitems.MyFood;
+import com.lom.lotsomobstabs.MyBlockTab;
+import com.lom.lotsomobstabs.MyCombatTab;
+import com.lom.lotsomobstabs.MyItemsTab;
+import com.lom.lotsomobsworldgen.FossilOreGeneration;
+import com.lom.lotsomobsworldgen.OreGeneration;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -137,7 +145,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class LotsOMobs
 {
 	public static String modid = "lom";	
-	@SidedProxy(clientSide = "com.lom.LotsOMobsCore.LotsOMobsClient",serverSide = "com.lom.LotsOMobsCore.LotsOMobsProxy")
+	@SidedProxy(clientSide = "com.lom.lotsomobscore.LotsOMobsClient",serverSide = "com.lom.lotsomobscore.LotsOMobsProxy")
 	public static LotsOMobsProxy proxy;
 	@Instance("LotsOMobs")
 	public static LotsOMobs instance;	
@@ -170,6 +178,32 @@ public class LotsOMobs
 	public static  BiomeGenBase modBiomeIceMountains;
 	public static  BiomeGenBase modBiomeIceOcean;
 	public static  BiomeGenBase modBiomeIceIslands;
+
+//Achievements
+	public static Achievement AchievementLogIn;
+	public static Achievement AchievementDeer;
+	public static Achievement AchievementBoar;
+	public static Achievement AchievementCamel;
+	public static Achievement AchievementReptile;
+	public static Achievement AchievementWhale;
+	public static Achievement AchievementLion;
+	public static Achievement AchievementFrog;
+	public static Achievement AchievementPenguin;
+	public static Achievement AchievementFossil;
+	public static Achievement AchievementDino;
+	public static Achievement AchievementIceAge;
+	public static Achievement AchievementDinosaur;
+	public static Achievement AchievementIceCreature;
+	public static Achievement AchievementAmber;
+	public static Achievement AchievementIcemintuim;
+	public static Achievement AchievementIceTool;
+	public static Achievement AchievementIceArmor;
+	public static Achievement AchievementFurArmor;
+	public static Achievement AchievementDinoArmor;
+	public static Achievement AchievementAmberArmor;
+	public static Achievement AchievementAmberTool;
+
+
 
 //Items
 	public static Item DeerFur;
@@ -210,6 +244,10 @@ public class LotsOMobs
 	public static Item EasterCake3;
 	public static Item EasterCake4;
 	public static Item EasterCake5;
+	public static Item IcemintuimBar;
+	public static Item MammothMeat;
+	public static Item RawMammoth;
+	public static Item WoolyFur;
 	
 	public static Item HornSword;	
 	public static  Item AmberPickaxe;
@@ -222,6 +260,11 @@ public class LotsOMobs
 	public static  Item IvoryShovel;
 	public static  Item IvorySword;
 	public static  Item IvoryHoe;
+	public static  Item IcemintuimPickaxe;
+	public static  Item IcemintuimAxe;
+	public static  Item IcemintuimShovel;
+	public static  Item IcemintuimSword;
+	public static  Item IcemintuimHoe;
 	
 	public static  Item FurHelmet;
 	public static  Item FurChestplate;
@@ -241,7 +284,17 @@ public class LotsOMobs
 	public static  Item DinoFurHelmet;
 	public static  Item DinoFurChestplate;
 	public static  Item DinoFurLeggings;
-	public static  Item DinoFurBoots;	
+	public static  Item DinoFurBoots;
+	
+	public static  Item EskimoHelmet;
+	public static  Item EskimoChestplate;
+	public static  Item EskimoLeggings;
+	public static  Item EskimoBoots;
+	
+	public static  Item IcemintuimHelmet;
+	public static  Item IcemintuimChestplate;
+	public static  Item IcemintuimLeggings;
+	public static  Item IcemintuimBoots;
 //Fossils and shit
 	//Fossils and DNAs
 	public static  Item FossilTri;
@@ -280,6 +333,9 @@ public class LotsOMobs
 	public static Block EasterCake3Block;
 	public static Block EasterCake4Block;
 	public static Block EasterCake5Block;
+	public static Block IcemintuimOre;
+	public static Block IceCoal;
+	public static Block IceIron;
 
 	public static BlockMyFlower OrangeFlower;
 	public static BlockMyFlower Flowers;
@@ -376,8 +432,8 @@ public class LotsOMobs
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-        MinecraftForge.TERRAIN_GEN_BUS.register(this);
         this.initConfiguration(event);
+
 //Biomes
 		 modBiomeAntartica = new BiomeGenAntartica(ConfigDetails.AntarticaID).setColor(747097).setBiomeName("Antartica");
 		 modBiomeArcticOcean = new BiomeGenArcticOcean(ConfigDetails.ArcticOceanID).setColor(747097).setBiomeName("Arctic Ocean");
@@ -421,6 +477,9 @@ public class LotsOMobs
 		EasterCake3Block = new BlockEasterCake().setHardness(0.1F).setBlockName("EasterCake3").setBlockTextureName("EasterCake3");
 		EasterCake4Block = new BlockEasterCake().setHardness(0.1F).setBlockName("EasterCake4").setBlockTextureName("EasterCake4");
 		EasterCake5Block = new BlockEasterCake().setHardness(0.1F).setBlockName("EasterCake5").setBlockTextureName("EasterCake5");
+		IcemintuimOre = new BlockIcemintuimOre(2, 0).setBlockName("IcemintuimOre").setHardness(10.9F).setBlockName("IcemintuimOre");
+		IceCoal = new BlockIceCoal(2, 0).setBlockName("IceCoal").setHardness(10.9F).setBlockName("IceCoal");
+		IceIron = new BlockIceIron(2, 0).setBlockName("IceIron").setHardness(10.9F).setBlockName("IceIron");
 
 		//Flowers
 		OrangeFlower = (BlockMyFlower)(new BlockMyFlower(ConfigDetails.OrangeFlowerID)).setHardness(0.0F).setBlockName("OrangeFlower");
@@ -457,6 +516,9 @@ public class LotsOMobs
 	     GameRegistry.registerBlock(EasterCake3Block, "EasterCake3Block");
 	     GameRegistry.registerBlock(EasterCake4Block, "EasterCake4Block");
 	     GameRegistry.registerBlock(EasterCake5Block, "EasterCake5Block");
+	     GameRegistry.registerBlock(IceCoal, "IceCoal");
+	     GameRegistry.registerBlock(IceIron, "IceIron");
+	     GameRegistry.registerBlock(IcemintuimOre, "IcemintuimOre");
 
 	     //Flowers
 	     /*GameRegistry.registerBlock(OrangeFlower, "Orange Flower");
@@ -486,8 +548,10 @@ public class LotsOMobs
 		 DinoBone = new ItemMaterials().setTextureName(modid + ":DinoBone").setUnlocalizedName("DinoBone");
 		 DinoFur = new ItemMaterials().setTextureName(modid + ":DinoFur").setUnlocalizedName("DinoFur");
 		 TimeTraveler = new ItemTimeTraveler().setTextureName(modid + ":TimeTraveler").setUnlocalizedName("TimeTraveler");
-		 PortalPlacer = new ItemPortalPlacer().setTextureName(modid + ":PortalPlacer").setUnlocalizedName("PortalPlacer");		 
+		 //PortalPlacer = new ItemPortalPlacer().setTextureName(modid + ":PortalPlacer").setUnlocalizedName("PortalPlacer");		 
 		 Amber = new ItemMaterials().setTextureName(modid + ":Amber").setUnlocalizedName("Amber");		 
+		 IcemintuimBar = new ItemMaterials().setTextureName(modid + ":IcemintuimBar").setUnlocalizedName("IcemintuimBar");		 
+		 WoolyFur = new ItemMaterials().setTextureName(modid + ":WoolyFur").setUnlocalizedName("WoolyFur");		 
 		 
 		 Venison = new MyFood(6, 1F, false).setTextureName(modid + ":Venison").setUnlocalizedName("Venison");
 		 RawVenison = new MyFood(2, 1F, false).setTextureName(modid + ":RawVenison").setUnlocalizedName("RawVenison");
@@ -514,6 +578,8 @@ public class LotsOMobs
 		 EasterCake3 = new ItemEasterCake(LotsOMobs.EasterCake3Block).setMaxStackSize(1).setUnlocalizedName("EasterCake").setCreativeTab(LotsOMobs.LotsOMobsItemsTab).setTextureName("EasterCake3");
 		 EasterCake4 = new ItemEasterCake(LotsOMobs.EasterCake4Block).setMaxStackSize(1).setUnlocalizedName("EasterCake").setCreativeTab(LotsOMobs.LotsOMobsItemsTab).setTextureName("EasterCake4");
 		 EasterCake5 = new ItemEasterCake(LotsOMobs.EasterCake5Block).setMaxStackSize(1).setUnlocalizedName("EasterCake").setCreativeTab(LotsOMobs.LotsOMobsItemsTab).setTextureName("EasterCake5");
+		 RawMammoth = new MyFood(3, 1F, false).setUnlocalizedName("RawMammoth").setTextureName(modid + ":RawMammoth");
+		 MammothMeat = new MyFood(7, 1F, false).setUnlocalizedName("MammothMeat").setTextureName(modid + ":MammothMeat");
 //Fossils and Shit
 		//Fossils and DNAs
 		 FossilTri = new ItemDNA().setUnlocalizedName("FossilTri").setTextureName(modid + ":Fossil");
@@ -566,6 +632,22 @@ public class LotsOMobs
 		 DinoFurLeggings = new ItemArmor(LotsOMobs.Dino, proxy.addArmor("DinoFurArmor"), 2).setUnlocalizedName("DinoLeggings").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":DinoLeggings");;
 		 DinoFurBoots = new ItemArmor(LotsOMobs.Dino, proxy.addArmor("DinoFurArmor"), 3).setUnlocalizedName("DinoBoots").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":DinoBoots");;
 
+		 IcemintuimPickaxe = (new ItemMyPickaxe(LotsOMobs.EnumToolMaterialIcemintuim)).setUnlocalizedName("IcemintuimPickaxe").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":IcemintuimPickaxe"); ;
+		 IcemintuimAxe = (new ItemMyAxe(LotsOMobs.EnumToolMaterialIcemintuim)).setUnlocalizedName("IcemintuimAxe").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":IcemintuimAxe"); ;
+		 IcemintuimShovel = (new ItemMyShovel(LotsOMobs.EnumToolMaterialIcemintuim)).setUnlocalizedName("IcemintuimShovel").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":IcemintuimShovel"); ;
+		 IcemintuimSword = (new ItemSword(LotsOMobs.EnumToolMaterialIcemintuim)).setUnlocalizedName("IcemintuimSword").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":IcemintuimSword"); ;
+		 IcemintuimHoe = (new ItemHoe( LotsOMobs.EnumToolMaterialIcemintuim)).setUnlocalizedName("IcemintuimHoe").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":IcemintuimHoe"); ;
+
+		 IcemintuimHelmet = new ItemArmor(LotsOMobs.IcemintuimA, proxy.addArmor("IcemintuimArmor"), 0).setUnlocalizedName("IcemintuimHelmet").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":IcemintuimHelmet");;
+		 IcemintuimChestplate = new ItemArmor( LotsOMobs.IcemintuimA, proxy.addArmor("IcemintuimArmor"), 1).setUnlocalizedName("IcemintuimChest").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":IcemintuimChest");;
+		 IcemintuimLeggings = new ItemArmor(LotsOMobs.IcemintuimA, proxy.addArmor("IcemintuimArmor"), 2).setUnlocalizedName("IcemintuimLeggings").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":IcemintuimLeggings");;
+		 IcemintuimBoots = new ItemArmor(LotsOMobs.IcemintuimA, proxy.addArmor("IcemintuimArmor"), 3).setUnlocalizedName("IcemintuimBoots").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":IcemintuimBoots");;
+		 
+		 EskimoHelmet = new ItemArmor(LotsOMobs.Eskimo, proxy.addArmor("EskimoArmor"), 0).setUnlocalizedName("EskimoHelmet").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":EskimoHelmet");;
+		 EskimoChestplate = new ItemArmor( LotsOMobs.Eskimo, proxy.addArmor("EskimoArmor"), 1).setUnlocalizedName("EskimoChest").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":EskimoChest");;
+		 EskimoLeggings = new ItemArmor(LotsOMobs.Eskimo, proxy.addArmor("EskimoArmor"), 2).setUnlocalizedName("EskimoLeggings").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":EskimoLeggings");;
+		 EskimoBoots = new ItemArmor(LotsOMobs.Eskimo, proxy.addArmor("EskimoArmor"), 3).setUnlocalizedName("EskimoBoots").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":EskimoBoots");;
+		
 //Register Items
 		 GameRegistry.registerItem(DeerFur, "Deer_Fur", modid);
 		 GameRegistry.registerItem(Horn, "Horn", modid);
@@ -578,13 +660,15 @@ public class LotsOMobs
 		 GameRegistry.registerItem(DinoBone, "DinoBone", modid);
 		 GameRegistry.registerItem(DinoFur, "DinoFur", modid);
 		 GameRegistry.registerItem(TimeTraveler, "TimeTraveler", modid);
-		 GameRegistry.registerItem(PortalPlacer, "PortalPlacer", modid);
+		 //GameRegistry.registerItem(PortalPlacer, "PortalPlacer", modid);
 		 GameRegistry.registerItem(Amber, "Amber", modid);
 		 GameRegistry.registerItem(EasterCake1, "EasterCake1", modid);
 		 GameRegistry.registerItem(EasterCake2, "EasterCake2", modid);
 		 GameRegistry.registerItem(EasterCake3, "EasterCake3", modid);
 		 GameRegistry.registerItem(EasterCake4, "EasterCake4", modid);
 		 GameRegistry.registerItem(EasterCake5, "EasterCake5", modid);
+		 GameRegistry.registerItem(IcemintuimBar, "IcemintuimBar", modid);
+		 GameRegistry.registerItem(WoolyFur, "WoolyFur", modid);
 		 
 //Fossils and Shit
 		 GameRegistry.registerItem(FossilTri, "FossilTri", modid);
@@ -625,6 +709,8 @@ public class LotsOMobs
 		 GameRegistry.registerItem(PineApple, "PineApple", modid);
 		 GameRegistry.registerItem(RawPenguin, "Raw_Penguin", modid);
 		 GameRegistry.registerItem(PenguinMeat, "PenguinMeat", modid);
+		 GameRegistry.registerItem(RawMammoth, "Raw_Mammoth", modid);
+		 GameRegistry.registerItem(MammothMeat, "MammothMeat", modid);
 
 		 GameRegistry.registerItem(HornSword, "HornSword", modid);
 		 GameRegistry.registerItem(AmberSword, "AmberSword", modid);
@@ -654,7 +740,21 @@ public class LotsOMobs
 		 GameRegistry.registerItem(DinoFurChestplate, "DinoFurChestplate", modid);
 		 GameRegistry.registerItem(DinoFurLeggings, "DinoFurLeggings", modid);
 		 GameRegistry.registerItem(DinoFurBoots, "DinoFurBoots", modid);
+		 GameRegistry.registerItem(IcemintuimSword, "IcemintuimSword", modid);
+		 GameRegistry.registerItem(IcemintuimPickaxe, "IcemintuimPickaxe", modid);
+		 GameRegistry.registerItem(IcemintuimAxe, "IcemintuimAxe", modid);
+		 GameRegistry.registerItem(IcemintuimShovel, "IcemintuimShovel", modid);
+		 GameRegistry.registerItem(IcemintuimHoe, "IcemintuimHoe", modid);
 		 
+		 GameRegistry.registerItem(IcemintuimHelmet, "IcemintuimHelmet", modid);
+		 GameRegistry.registerItem(IcemintuimChestplate, "IcemintuimChestplate", modid);
+		 GameRegistry.registerItem(IcemintuimLeggings, "IcemintuimLeggings", modid);
+		 GameRegistry.registerItem(IcemintuimBoots, "IcemintuimBoots", modid);
+		 GameRegistry.registerItem(EskimoHelmet, "EskimoHelmet", modid);
+		 GameRegistry.registerItem(EskimoChestplate, "EskimoChestplate", modid);
+		 GameRegistry.registerItem(EskimoLeggings, "EskimoLeggings", modid);
+		 GameRegistry.registerItem(EskimoBoots, "EskimoBoots", modid);
+
 		 //MinecraftForge.EVENT_BUS.register(new BoneMealEventDino()); 
 	     //WorldGeneration
 	     GameRegistry.registerWorldGenerator(new FossilOreGeneration(), 2);
@@ -666,6 +766,44 @@ public class LotsOMobs
 	@EventHandler
 	public void load(FMLInitializationEvent event)
 	{	
+		
+//Achievements
+        AchievementLogIn = new Achievement("achievement.login", "login", 0, 0, Items.map, (Achievement)null).registerStat();
+        AchievementDeer = new Achievement("achievement.killdeer", "killdeer", -2, 2, this.RawVenison, (Achievement)AchievementLogIn).initIndependentStat().registerStat();
+        AchievementBoar = new Achievement("achievement.killboar", "killboar", -5, 5, this.RawBoar, (Achievement)AchievementLogIn).registerStat();
+        AchievementCamel = new Achievement("achievement.killcamel", "killcamel", 3, 5, this.RawCamel, (Achievement)AchievementLogIn).registerStat();
+        AchievementReptile = new Achievement("achievement.killreptile", "killreptile", 1, 3, this.RawReptile, (Achievement)AchievementLogIn).registerStat();
+        AchievementWhale = new Achievement("achievement.killwhale", "killwhale", 3, -3, this.RawWhale, (Achievement)AchievementLogIn).registerStat();
+        AchievementLion = new Achievement("achievement.killlion", "killlion", 5, -6, this.RawLion, (Achievement)AchievementLogIn).registerStat();
+        AchievementFrog = new Achievement("achievement.killfrog", "killfrog", -4, -6, this.RawFrog, (Achievement)AchievementLogIn).registerStat();
+        AchievementPenguin = new Achievement("achievement.killpenguin", "killpenguin", -4, -2, this.RawPenguin, (Achievement)AchievementLogIn).registerStat();
+        AchievementFossil = new Achievement("achievement.minefossil", "minefossil", 4, 0, this.FossilBro, (Achievement)AchievementLogIn).registerStat();
+        AchievementDino = new Achievement("achievement.tpdino", "tpdino", 7, -2, this.DinoPortal, (Achievement)AchievementFossil).registerStat();
+        AchievementIceAge = new Achievement("achievement.tpiceage", "tpiceage", 7, 2, this.IcePortal, (Achievement)AchievementFossil).registerStat();
+        AchievementDinosaur = new Achievement("achievement.killdinosaur", "killdinosaur", 9, -4, this.DinoBone, (Achievement)AchievementDino).registerStat();
+        AchievementAmber = new Achievement("achievement.mineamber", "mineamber", 11, -2, this.Amber, (Achievement)AchievementDino).registerStat();
+        AchievementIcemintuim = new Achievement("achievement.mineicemintuim", "mineicemintuim", 11, 2, this.IcemintuimBar, (Achievement)AchievementIceAge).registerStat();
+        AchievementIceCreature = new Achievement("achievement.killicecreature", "killicecreature", 9, 4, this.WoolyFur, (Achievement)AchievementIceAge).registerStat();
+
+        AchievementPage AchievementPageLotsOMobs = new AchievementPage("LotsOMobs", new Achievement[]
+        		{AchievementLogIn, 
+        		 AchievementDeer, 
+        		 AchievementBoar, 
+        		 AchievementCamel, 
+        		 AchievementReptile,
+        		 AchievementWhale,
+        		 AchievementLion,
+        		 AchievementFrog,
+        		 AchievementPenguin,
+        		 AchievementFossil,
+        		 AchievementDino,
+        		 AchievementIceAge,
+        		 AchievementDinosaur,
+        		 AchievementAmber,
+        		 AchievementIcemintuim,
+        		 AchievementIceCreature});
+        AchievementPage.registerAchievementPage(AchievementPageLotsOMobs);
+
 //Recipes
 		 GameRegistry.addSmelting(RawVenison, new ItemStack(Venison, 1), 1.0F);
 		 GameRegistry.addSmelting(RawBoar, new ItemStack(BoarMeat, 1), 1.0F);
@@ -674,6 +812,8 @@ public class LotsOMobs
 		 GameRegistry.addSmelting(RawCamel, new ItemStack(CamelMeat, 1), 1.0F);
 		 GameRegistry.addSmelting(RawLion, new ItemStack(LionMeat, 1), 1.0F);
 		 GameRegistry.addSmelting(RawFrog, new ItemStack(CookedFrog, 1), 1.0F);
+		 GameRegistry.addSmelting(IcemintuimOre, new ItemStack(IcemintuimBar, 1), 1.0F);
+		 GameRegistry.addSmelting(IceIron, new ItemStack(Items.iron_ingot, 1), 1.0F);
 
 		 
 		 GameRegistry.addRecipe(new ItemStack(CactiOnAStick, 1), new Object [] {"#", "X", Character.valueOf('#'), Items.fishing_rod, Character.valueOf('X'), Blocks.cactus});
@@ -744,6 +884,24 @@ public class LotsOMobs
 		 GameRegistry.addRecipe(new ItemStack(DinoFurChestplate, 1), new Object [] {"# #", "###", "###", Character.valueOf('#'), DinoFur});
 		 GameRegistry.addRecipe(new ItemStack(DinoFurLeggings, 1), new Object [] {"###", "# #", "# #", Character.valueOf('#'), DinoFur});
 		 GameRegistry.addRecipe(new ItemStack(DinoFurBoots, 1), new Object [] {"# #", "# #", Character.valueOf('#'), DinoFur});
+		 
+		 GameRegistry.addRecipe(new ItemStack(IcemintuimHelmet, 1), new Object [] {"###", "# #", Character.valueOf('#'), IcemintuimBar});
+		 GameRegistry.addRecipe(new ItemStack(IcemintuimChestplate, 1), new Object [] {"# #", "###", "###", Character.valueOf('#'), IcemintuimBar});
+		 GameRegistry.addRecipe(new ItemStack(IcemintuimLeggings, 1), new Object [] {"###", "# #", "# #", Character.valueOf('#'), IcemintuimBar});
+		 GameRegistry.addRecipe(new ItemStack(IcemintuimBoots, 1), new Object [] {"# #", "# #", Character.valueOf('#'), IcemintuimBar});
+		 
+		 GameRegistry.addRecipe(new ItemStack(EskimoHelmet, 1), new Object [] {"###", "# #", Character.valueOf('#'), WoolyFur});
+		 GameRegistry.addRecipe(new ItemStack(EskimoChestplate, 1), new Object [] {"# #", "###", "###", Character.valueOf('#'), WoolyFur});
+		 GameRegistry.addRecipe(new ItemStack(EskimoLeggings, 1), new Object [] {"###", "# #", "# #", Character.valueOf('#'), WoolyFur});
+		 GameRegistry.addRecipe(new ItemStack(EskimoBoots, 1), new Object [] {"# #", "# #", Character.valueOf('#'), WoolyFur});
+		 
+		 GameRegistry.addRecipe(new ItemStack(IcemintuimPickaxe, 1), new Object [] {"###", " X ", " X ", Character.valueOf('#'), IcemintuimBar, Character.valueOf('X'), Items.stick});
+		 GameRegistry.addRecipe(new ItemStack(IcemintuimShovel, 1), new Object [] {"#", "X", "X", Character.valueOf('#'), IcemintuimBar, Character.valueOf('X'), Items.stick});
+		 GameRegistry.addRecipe(new ItemStack(IcemintuimSword, 1), new Object [] {"#", "#", "X", Character.valueOf('#'), IcemintuimBar, Character.valueOf('X'), Items.stick});
+		 GameRegistry.addRecipe(new ItemStack(IcemintuimAxe, 1), new Object [] {"##", "#X ", " X", Character.valueOf('#'), IcemintuimBar, Character.valueOf('X'), Items.stick});
+		 GameRegistry.addRecipe(new ItemStack(IcemintuimAxe, 1), new Object [] {"##", "X#", "X ", Character.valueOf('#'), IcemintuimBar, Character.valueOf('X'), Items.stick});
+		 GameRegistry.addRecipe(new ItemStack(IcemintuimHoe, 1), new Object [] {"##", " X", " X", Character.valueOf('#'), IcemintuimBar, Character.valueOf('X'), Items.stick});
+		 GameRegistry.addRecipe(new ItemStack(IcemintuimHoe, 1), new Object [] {"##", "X ", "X ", Character.valueOf('#'), IcemintuimBar, Character.valueOf('X'), Items.stick});
 		 
 //Mobs
 		if(ConfigDetails.DeerOn == true)
@@ -1018,6 +1176,21 @@ public class LotsOMobs
 		       	 BiomeGenBase.extremeHills,
 		       	 BiomeGenBase.desert,});
 		}
+		if(ConfigDetails.MammothOn == true)
+		{    
+	        EntityRegistry.registerGlobalEntityID(EntityMammoth.class,  "Mammoth", ConfigDetails.MammothID, 0x4A2710, 0x85471D);
+	        EntityRegistry.addSpawn(EntityMammoth.class,  10,  1,  2,  EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobs.modBiomeIcePlains, this.modBiomeIceMountains, this.modBiomeIceOcean, this.modBiomeIceIslands});
+		}
+		if(ConfigDetails.SaberToothOn == true)
+		{   
+	        EntityRegistry.registerGlobalEntityID(EntitySaberTooth.class,  "SaberTooth", ConfigDetails.SaberToothID, 0x6c4821, 0xcab7a0);
+	        EntityRegistry.addSpawn(EntitySaberTooth.class,  10,  1,  2,  EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobs.modBiomeIcePlains, this.modBiomeIceMountains, this.modBiomeIceOcean, this.modBiomeIceIslands});
+		}
+		if(ConfigDetails.MuskOxOn == true)
+		{  
+	    	EntityRegistry.registerGlobalEntityID(EntityMuskOx.class, "MuskOx", EntityRegistry.findGlobalUniqueEntityId(), 0x8b6a4e, 0x64493d);
+	     	EntityRegistry.addSpawn(EntityMuskOx.class, 15, 6, 9, EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobs.modBiomeIcePlains, this.modBiomeIceMountains, this.modBiomeIceOcean, this.modBiomeIceIslands});
+		}
 	
 //TODO Add more Mobs		
      	proxy.registerRenderInformation();
@@ -1031,5 +1204,10 @@ public class LotsOMobs
      	ChestGenHooks.getInfo(ChestGenHooks.MINESHAFT_CORRIDOR).addItem(new WeightedRandomChestContent(LotsOMobs.Tomato, 0, 1, 4, 50));
      	ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_DESERT_CHEST).addItem(new WeightedRandomChestContent(LotsOMobs.Tomato, 0, 1, 4, 50));
      	ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(LotsOMobs.Tomato, 0, 1, 4, 50));     	
+
+     	MinecraftForge.EVENT_BUS.register(new LotsOMobsAchievements());
+     	FMLCommonHandler.instance().bus().register(new LotsOMobsAchievements());
+	
 	}
+	
 }

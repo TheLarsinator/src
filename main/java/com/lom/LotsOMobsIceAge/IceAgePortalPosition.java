@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsIceAge;
+package com.lom.lotsomobsiceage;
 import net.minecraft.util.ChunkCoordinates;
 public class IceAgePortalPosition extends ChunkCoordinates
 {

@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsAI;
+package com.lom.lotsomobsai;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLiving;

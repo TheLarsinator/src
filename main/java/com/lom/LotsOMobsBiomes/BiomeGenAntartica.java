@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsBiomes;
+package com.lom.lotsomobsbiomes;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.world.biome.BiomeGenBase;

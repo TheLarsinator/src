@@ -1,4 +1,4 @@
-package com.lom.LotsOMobsItems;
+package com.lom.lotsomobsitems;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -7,9 +7,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 
-import com.lom.LotsOMobsCore.ConfigDetails;
-import com.lom.LotsOMobsCore.LotsOMobs;
-import com.lom.LotsOMobsDino.TeleporterDino;
+import com.lom.lotsomobscore.ConfigDetails;
+import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsdino.TeleporterDino;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
