@@ -1,8 +1,16 @@
 package com.lom.lotsomobsinit;
 
+import static com.lom.lotsomobscore.LotsOMobs.modid;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemHoe;
+import net.minecraft.item.ItemSword;
+
 import com.lom.lotsomobscore.LotsOMobs;
 import com.lom.lotsomobscore.LotsOMobsProxy;
 import com.lom.lotsomobscrops.ItemMyFoodSeed;
+import com.lom.lotsomobsitems.IceTimeTraveler;
 import com.lom.lotsomobsitems.ItemCactiOnAStick;
 import com.lom.lotsomobsitems.ItemDNA;
 import com.lom.lotsomobsitems.ItemEasterCake;
@@ -16,12 +24,6 @@ import com.lom.lotsomobsitems.MyFood;
 
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemHoe;
-import net.minecraft.item.ItemSword;
-import static com.lom.lotsomobscore.LotsOMobs.modid;
 
 public class LotsOMobsItems 
 {
@@ -59,6 +61,7 @@ public class LotsOMobsItems
 		public static Item DinoBone;
 		public static Item DinoFur;
 		public static Item TimeTraveler;
+		public static Item IceTimeTraveler;
 		public static Item PortalPlacer;
 		public static Item Amber;
 		public static Item EasterCake1;
@@ -70,6 +73,7 @@ public class LotsOMobsItems
 		public static Item MammothMeat;
 		public static Item RawMammoth;
 		public static Item WoolyFur;
+
 		
 		public static Item HornSword;	
 		public static  Item AmberPickaxe;
@@ -150,6 +154,7 @@ public class LotsOMobsItems
 		 DinoBone = new ItemMaterials().setTextureName(modid + ":DinoBone").setUnlocalizedName("DinoBone");
 		 DinoFur = new ItemMaterials().setTextureName(modid + ":DinoFur").setUnlocalizedName("DinoFur");
 		 TimeTraveler = new ItemTimeTraveler().setTextureName(modid + ":TimeTraveler").setUnlocalizedName("TimeTraveler");
+		 IceTimeTraveler = new IceTimeTraveler().setTextureName(modid + ":IcePortal").setUnlocalizedName("IceTimeTraveler");
 		 //PortalPlacer = new ItemPortalPlacer().setTextureName(modid + ":PortalPlacer").setUnlocalizedName("PortalPlacer");		 
 		 Amber = new ItemMaterials().setTextureName(modid + ":Amber").setUnlocalizedName("Amber");		 
 		 IcemintuimBar = new ItemMaterials().setTextureName(modid + ":IcemintuimBar").setUnlocalizedName("IcemintuimBar");		 
@@ -262,6 +267,7 @@ public class LotsOMobsItems
 		 GameRegistry.registerItem(DinoBone, "DinoBone", modid);
 		 GameRegistry.registerItem(DinoFur, "DinoFur", modid);
 		 GameRegistry.registerItem(TimeTraveler, "TimeTraveler", modid);
+		 GameRegistry.registerItem(IceTimeTraveler, "IceTimeTraveler", modid);
 		 //GameRegistry.registerItem(PortalPlacer, "PortalPlacer", modid);
 		 GameRegistry.registerItem(Amber, "Amber", modid);
 		 GameRegistry.registerItem(EasterCake1, "EasterCake1", modid);
