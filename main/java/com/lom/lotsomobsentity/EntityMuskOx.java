@@ -1,7 +1,5 @@
 package com.lom.lotsomobsentity;
 
-import com.lom.lotsomobscore.LotsOMobs;
-
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -19,6 +17,8 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityMuskOx extends EntityAnimal
 {
@@ -93,7 +93,7 @@ public class EntityMuskOx extends EntityAnimal
 
     protected Item getDropItem()
     {
-        return LotsOMobs.WoolyFur;
+        return LotsOMobsItems.WoolyFur;
     }
 
     /**
@@ -107,7 +107,7 @@ public class EntityMuskOx extends EntityAnimal
 
         for (k = 0; k < j; ++k)
         {
-            this.dropItem(LotsOMobs.WoolyFur, 1);
+            this.dropItem(LotsOMobsItems.WoolyFur, 1);
         }
 
         j = this.rand.nextInt(3) + 1 + this.rand.nextInt(1 + par2);

@@ -1,7 +1,5 @@
 package com.lom.lotsomobscrops;
 
-import java.util.Date;
-
 import net.minecraft.block.BlockCrops;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
@@ -13,6 +11,7 @@ import scala.util.Random;
 
 import com.ibm.icu.util.Calendar;
 import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -60,12 +59,12 @@ public class BlockPineApple extends BlockCrops
 
     protected Item func_149866_i()
     {
-        return LotsOMobs.PineApple;
+        return LotsOMobsItems.PineApple;
     }
 
     protected Item func_149865_P()
     {
-        return LotsOMobs.PineApple;
+        return LotsOMobsItems.PineApple;
     }
     /**
      * The type of render function that is called for this block

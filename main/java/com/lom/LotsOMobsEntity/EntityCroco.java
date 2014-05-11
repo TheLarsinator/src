@@ -20,7 +20,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityCroco extends EntityAgeableMob
 {
@@ -197,7 +197,7 @@ return 1F;
 /*
     protected void dropRareDrop(int par1)
     {
-        this.dropItem(LotsOMobs.DinoFur, 1);
+        this.dropItem(LotsOMobsItems.DinoFur, 1);
     }
 */
     /**
@@ -205,7 +205,7 @@ return 1F;
      */
     protected Item getDropItem()
     {
-        return LotsOMobs.ReptileMeat;
+        return LotsOMobsItems.ReptileMeat;
     }
 
  

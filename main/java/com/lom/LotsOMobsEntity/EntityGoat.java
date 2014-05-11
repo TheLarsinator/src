@@ -17,7 +17,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityGoat extends EntityAnimal
 {
@@ -124,7 +124,7 @@ public class EntityGoat extends EntityAnimal
      */
     protected void dropFewItems(boolean par1, int par2)
     {
-       //     this.dropItem(LotsOMobs.DeerFur.itemID, 1);
+       //     this.dropItem(LotsOMobsItems.DeerFur.itemID, 1);
     }
 
     /**
@@ -153,20 +153,20 @@ public class EntityGoat extends EntityAnimal
             if (var2 != null && var2.getItem() == Items.shears)
             {
 /*
-            	if (!par1EntityPlayer.inventory.addItemStackToInventory(new ItemStack(LotsOMobs.DeerFur)))
+            	if (!par1EntityPlayer.inventory.addItemStackToInventory(new ItemStack(LotsOMobsItems.DeerFur)))
                 {
-                    par1EntityPlayer.dropPlayerItem(new ItemStack(LotsOMobs.DeerFur.itemID, 1, 0));
+                    par1EntityPlayer.dropPlayerItem(new ItemStack(LotsOMobsItems.DeerFur.itemID, 1, 0));
                 }*/
             	if(!worldObj.isRemote)
             	{
             		if(this.isChild()==true)
             		{
-            		entityDropItem(new ItemStack(LotsOMobs.AngoraWool, 1), 1);
+            		entityDropItem(new ItemStack(LotsOMobsItems.AngoraWool, 1), 1);
             		}
             		else
             		{
             			int A = rand.nextInt(3)+1;
-            			entityDropItem(new ItemStack(LotsOMobs.AngoraWool, A), 1);
+            			entityDropItem(new ItemStack(LotsOMobsItems.AngoraWool, A), 1);
             		}
             	}
                 this.worldObj.playSoundAtEntity(this, "mob.sheep.say", 1.0F, 1.0F);

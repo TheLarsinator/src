@@ -1,14 +1,14 @@
 package com.lom.lotsomobsiceage;
 
-import com.lom.lotsomobscore.LotsOMobs;
-
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 
+import com.lom.lotsomobsinit.LotsOMobsBiomes;
+
 public class GenLayerBiomesIceAge extends GenLayer {
 
-	protected BiomeGenBase[] allowedBiomes = {LotsOMobs.modBiomeIceIslands,LotsOMobs.modBiomeIceMountains, LotsOMobs.modBiomeIceOcean, LotsOMobs.modBiomeIcePlains};
+	protected BiomeGenBase[] allowedBiomes = {LotsOMobsBiomes.modBiomeIceIslands,LotsOMobsBiomes.modBiomeIceMountains, LotsOMobsBiomes.modBiomeIceOcean, LotsOMobsBiomes.modBiomeIcePlains};
 
 	public GenLayerBiomesIceAge(long seed, GenLayer genlayer) {
 	super(seed);

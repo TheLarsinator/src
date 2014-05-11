@@ -14,10 +14,9 @@ import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityPenguin extends EntityAnimal
 {
@@ -94,7 +93,7 @@ public class EntityPenguin extends EntityAnimal
      */
     protected Item getDropItem()
     {
-        return LotsOMobs.RawPenguin;
+        return LotsOMobsItems.RawPenguin;
     }
 
     /**
@@ -124,11 +123,11 @@ public class EntityPenguin extends EntityAnimal
         {
             if (this.isBurning())
             {
-                this.dropItem(LotsOMobs.PenguinMeat, 1);
+                this.dropItem(LotsOMobsItems.PenguinMeat, 1);
             }
             else
             {
-                this.dropItem(LotsOMobs.RawPenguin, 1);
+                this.dropItem(LotsOMobsItems.RawPenguin, 1);
             }
         }
     }

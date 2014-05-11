@@ -16,7 +16,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityPolarBear extends EntityAgeableMob
 {
@@ -30,7 +30,7 @@ public class EntityPolarBear extends EntityAgeableMob
        
         this.getNavigator().setAvoidsWater(true);
         this.tasks.addTask(0, new EntityAISwimming(this));
-        this.tasks.addTask(2, new EntityAITempt(this, 0.25F, LotsOMobs.RawPenguin, false));
+        this.tasks.addTask(2, new EntityAITempt(this, 0.25F, LotsOMobsItems.RawPenguin, false));
         this.tasks.addTask(4, new EntityAIWander(this, 0.2F));
         this.tasks.addTask(5, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
         this.tasks.addTask(6, new EntityAILookIdle(this));
@@ -79,7 +79,7 @@ public class EntityPolarBear extends EntityAgeableMob
     }
   /*  protected void dropRareDrop(int par1)
     {
-        this.dropItem(LotsOMobs.PolarBearHead.blockID, 1);
+        this.dropItem(LotsOMobsItems.PolarBearHead.blockID, 1);
     }
 */
     /**

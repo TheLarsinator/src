@@ -9,7 +9,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsBlocks;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityEasterBunny extends EntityLiving implements IMob
 {
@@ -90,7 +91,7 @@ public class EntityEasterBunny extends EntityLiving implements IMob
      */
     protected Item getDropItem()
     {
-        return LotsOMobs.DeerFur;
+        return LotsOMobsItems.DeerFur;
     }
 
     /**
@@ -153,35 +154,35 @@ public class EntityEasterBunny extends EntityLiving implements IMob
     {
         ItemStack itemstack = par1EntityPlayer.inventory.getCurrentItem();
 
-      /*  if (itemstack != null && itemstack.getItem() == Item.getItemFromBlock(LotsOMobs.EasterEgg1))
+        if (itemstack != null && itemstack.getItem() == Item.getItemFromBlock(LotsOMobsBlocks.EasterEgg1))
         {
             if (--itemstack.stackSize <= 0)
             {
-                par1EntityPlayer.inventory.setInventorySlotContents(par1EntityPlayer.inventory.currentItem, new ItemStack(LotsOMobs.Amber));
+                par1EntityPlayer.inventory.setInventorySlotContents(par1EntityPlayer.inventory.currentItem, new ItemStack(LotsOMobsItems.Amber));
             }
-            else if (!par1EntityPlayer.inventory.addItemStackToInventory(new ItemStack(LotsOMobs.Amber)))
+            else if (!par1EntityPlayer.inventory.addItemStackToInventory(new ItemStack(LotsOMobsItems.Amber)))
             {
-                par1EntityPlayer.dropItem(LotsOMobs.Amber.itemID, 1);
+                par1EntityPlayer.dropItem(LotsOMobsItems.Amber, 1);
             }
 
             return true;
         }
         
-        if (itemstack != null && itemstack.getItem() == Item.getItemFromBlock(LotsOMobs.EasterEgg2))
+        if (itemstack != null && itemstack.getItem() == Item.getItemFromBlock(LotsOMobsBlocks.EasterEgg2))
         {
             if (--itemstack.stackSize <= 0)
             {
-                par1EntityPlayer.inventory.setInventorySlotContents(par1EntityPlayer.inventory.currentItem, new ItemStack(LotsOMobs.IcemintuimBar));
+                par1EntityPlayer.inventory.setInventorySlotContents(par1EntityPlayer.inventory.currentItem, new ItemStack(LotsOMobsItems.IcemintuimBar));
             }
-            else if (!par1EntityPlayer.inventory.addItemStackToInventory(new ItemStack(LotsOMobs.IcemintuimBar)))
+            else if (!par1EntityPlayer.inventory.addItemStackToInventory(new ItemStack(LotsOMobsItems.IcemintuimBar)))
             {
-                par1EntityPlayer.dropItem(LotsOMobs.IcemintuimBar, 1);
+                par1EntityPlayer.dropItem(LotsOMobsItems.IcemintuimBar, 1);
             }
 
             return true;
-        }*/
+        }
         
-        if (itemstack != null && itemstack.getItem() == Item.getItemFromBlock(LotsOMobs.EasterEgg3))
+        if (itemstack != null && itemstack.getItem() == Item.getItemFromBlock(LotsOMobsBlocks.EasterEgg3))
         {
             if (--itemstack.stackSize <= 0)
             {
@@ -195,7 +196,7 @@ public class EntityEasterBunny extends EntityLiving implements IMob
             return true;
         }
         
-        if (itemstack != null && itemstack.getItem() == Item.getItemFromBlock(LotsOMobs.EasterEgg4))
+        if (itemstack != null && itemstack.getItem() == Item.getItemFromBlock(LotsOMobsBlocks.EasterEgg4))
         {
             if (--itemstack.stackSize <= 0)
             {
@@ -209,7 +210,7 @@ public class EntityEasterBunny extends EntityLiving implements IMob
             return true;
         }
         
-        if (itemstack != null && itemstack.getItem() == Item.getItemFromBlock(LotsOMobs.EasterEgg5))
+        if (itemstack != null && itemstack.getItem() == Item.getItemFromBlock(LotsOMobsBlocks.EasterEgg5))
         {
             if (--itemstack.stackSize <= 0)
             {

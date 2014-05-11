@@ -10,7 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityBunny extends EntityAgeableMob implements IMob
 {
@@ -89,7 +89,7 @@ public class EntityBunny extends EntityAgeableMob implements IMob
      */
     protected Item getDropItem()
     {
-        return LotsOMobs.DeerFur;
+        return LotsOMobsItems.DeerFur;
     }
 
     /**

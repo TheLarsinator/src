@@ -9,14 +9,13 @@ import net.minecraft.entity.ai.EntityAITempt;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
 import com.lom.lotsomobsai.EntityAIHop;
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityPDFrog extends EntityAgeableMob implements IMob {
 	public float field_70813_a;
@@ -117,11 +116,11 @@ public class EntityPDFrog extends EntityAgeableMob implements IMob {
         {
             if (this.isBurning())
             {
-                this.dropItem(LotsOMobs.CookedFrog, 1);
+                this.dropItem(LotsOMobsItems.CookedFrog, 1);
             }
             else
             {
-                this.dropItem(LotsOMobs.RawFrog, 1);
+                this.dropItem(LotsOMobsItems.RawFrog, 1);
             }
         }
     }

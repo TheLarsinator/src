@@ -15,7 +15,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityBee extends EntityAnimal
 {
@@ -34,7 +34,7 @@ public class EntityBee extends EntityAnimal
         this.tasks.addTask(0, new EntityAISwimming(this));
         this.tasks.addTask(1, new EntityAIPanic(this, 0.38F));
         this.tasks.addTask(2, new EntityAIMate(this, 0.2F));
-        this.tasks.addTask(3, new EntityAITempt(this, 0.25F, LotsOMobs.Honey, false));
+        this.tasks.addTask(3, new EntityAITempt(this, 0.25F, LotsOMobsItems.Honey, false));
         this.tasks.addTask(4, new EntityAIFollowParent(this, 0.25F));
         this.tasks.addTask(1, new EntityAIWander(this, 0.2F));
         this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
@@ -50,7 +50,7 @@ public class EntityBee extends EntityAnimal
     }
     protected Item getDropItem()
     {
-    	return LotsOMobs.Honey;
+    	return LotsOMobsItems.Honey;
     }
     
     /**

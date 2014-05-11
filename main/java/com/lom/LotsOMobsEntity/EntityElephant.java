@@ -16,7 +16,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityElephant extends EntityAnimal
 {
@@ -68,7 +68,7 @@ public class EntityElephant extends EntityAnimal
   /*  
     protected void dropRareDrop(int par1)
     {
-        this.dropItem(LotsOMobs.ElephantHead.blockID, 1);
+        this.dropItem(LotsOMobsItems.ElephantHead.blockID, 1);
     }
 */
     /**
@@ -100,7 +100,7 @@ public class EntityElephant extends EntityAnimal
      */
     protected Item getDropItem()
     {
-        return LotsOMobs.Ivory;
+        return LotsOMobsItems.Ivory;
     }
 
     /**
@@ -109,7 +109,7 @@ public class EntityElephant extends EntityAnimal
     protected void dropFewItems(boolean par1, int par2)
     {
         {
-            this.dropItem(LotsOMobs.Ivory, 2);
+            this.dropItem(LotsOMobsItems.Ivory, 2);
         }
 
         {

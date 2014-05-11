@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 
 import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -32,27 +33,27 @@ public Item getItemDropped(int par1, Random par2Random, int par3)
     int var3 = this.rand.nextInt(5);
     if (var3 == 0)
     {
-    return LotsOMobs.FossilTri;
+    return LotsOMobsItems.FossilTri;
     }
     else if (var3 == 1)
     {
-    return LotsOMobs.FossilBro;
+    return LotsOMobsItems.FossilBro;
     }
     else if (var3 == 2)
     {
-    return LotsOMobs.FossilRap;
+    return LotsOMobsItems.FossilRap;
     }
     else if (var3 == 3)
     {
-    return LotsOMobs.FossilRex;
+    return LotsOMobsItems.FossilRex;
     }
     else if (var3 == 4)
     {
-    return LotsOMobs.FossilPte;
+    return LotsOMobsItems.FossilPte;
     }
     else
     {
-    return LotsOMobs.FossilIch;
+    return LotsOMobsItems.FossilIch;
     }
 
 }

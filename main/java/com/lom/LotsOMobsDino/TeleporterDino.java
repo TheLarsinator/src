@@ -13,7 +13,7 @@ import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.Teleporter;
 import net.minecraft.world.WorldServer;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsBlocks;
 public class TeleporterDino extends Teleporter
 {
 private final WorldServer worldServerInstance;
@@ -109,10 +109,10 @@ public boolean placeInExistingPortal(Entity par1Entity, double par2, double par4
                                  for (int i2 = this.worldServerInstance.getActualHeight() - 1; i2 >= 0; --i2)
                                  {
                                          /** change this block **/
-                                         if (this.worldServerInstance.getBlock(k1, i2, l1) == LotsOMobs.DinoPortal)
+                                         if (this.worldServerInstance.getBlock(k1, i2, l1) == LotsOMobsBlocks.DinoPortal)
                                          {
                                                  /** change this block **/
-                                                 while (this.worldServerInstance.getBlock(k1, i2 - 1, l1) == LotsOMobs.DinoPortal)
+                                                 while (this.worldServerInstance.getBlock(k1, i2 - 1, l1) == LotsOMobsBlocks.DinoPortal)
                                                  {
                                                          --i2;
                                                  }
@@ -142,22 +142,22 @@ public boolean placeInExistingPortal(Entity par1Entity, double par2, double par4
                  d4 = (double)k + 0.5D;
                  int j2 = -1;
                  /** change this block **/
-                 if (this.worldServerInstance.getBlock(i - 1, j, k) == LotsOMobs.DinoPortal)
+                 if (this.worldServerInstance.getBlock(i - 1, j, k) == LotsOMobsBlocks.DinoPortal)
                  {
                          j2 = 2;
                  }
                  /** change this block **/
-                 if (this.worldServerInstance.getBlock(i + 1, j, k) == LotsOMobs.DinoPortal)
+                 if (this.worldServerInstance.getBlock(i + 1, j, k) == LotsOMobsBlocks.DinoPortal)
                  {
                          j2 = 0;
                  }
                  /** change this block **/
-                 if (this.worldServerInstance.getBlock(i, j, k - 1) == LotsOMobs.DinoPortal)
+                 if (this.worldServerInstance.getBlock(i, j, k - 1) == LotsOMobsBlocks.DinoPortal)
                  {
                          j2 = 3;
                  }
                  /** change this block **/
-                 if (this.worldServerInstance.getBlock(i, j, k + 1) == LotsOMobs.DinoPortal)
+                 if (this.worldServerInstance.getBlock(i, j, k + 1) == LotsOMobsBlocks.DinoPortal)
                  {
                          j2 = 1;
                  }
@@ -427,7 +427,7 @@ public boolean makePortal(Entity par1Entity)
                                  flag = i3 == 0 || i3 == 3 || l2 == -1 || l2 == 3;
                                 
                                  /** change these blocks **/
-                                 this.worldServerInstance.setBlock(k3, j3, i4, flag ? Blocks.mossy_cobblestone : LotsOMobs.DinoPortal, 0, 2);
+                                 this.worldServerInstance.setBlock(k3, j3, i4, flag ? Blocks.mossy_cobblestone : LotsOMobsBlocks.DinoPortal, 0, 2);
                          }
                  }
                  for (i3 = 0; i3 < 4; ++i3)

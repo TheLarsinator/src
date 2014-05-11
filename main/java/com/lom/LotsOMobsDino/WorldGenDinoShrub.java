@@ -7,7 +7,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenTrees;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsBlocks;
 
 public class WorldGenDinoShrub extends WorldGenTrees
 {
@@ -41,7 +41,7 @@ public class WorldGenDinoShrub extends WorldGenTrees
         if (block1 == Blocks.dirt || block1 == Blocks.grass)
         {
             ++par4;
-            this.setBlockAndNotifyAdequately(par1World, par3, par4, par5, LotsOMobs.DinoLog, this.field_150527_b);
+            this.setBlockAndNotifyAdequately(par1World, par3, par4, par5, LotsOMobsBlocks.DinoLog, this.field_150527_b);
 
             for (int l = par4; l <= par4 + 2; ++l)
             {

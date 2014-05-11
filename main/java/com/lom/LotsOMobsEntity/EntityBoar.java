@@ -21,7 +21,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.stats.AchievementList;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityBoar extends EntityAnimal
 {
@@ -52,7 +52,7 @@ public class EntityBoar extends EntityAnimal
 	    }
 	 /*   protected void dropRareDrop(int par1)
 	    {
-	        this.dropItem(LotsOMobs.BoarHead.blockID, 1);
+	        this.dropItem(LotsOMobsItems.BoarHead.blockID, 1);
 	    }
 */
 	    protected void func_110147_ax()
@@ -135,7 +135,7 @@ public class EntityBoar extends EntityAnimal
 	     */
 	    protected Item getDropItemId()
 	    {
-	        return this.isBurning() ? LotsOMobs.BoarMeat : LotsOMobs.RawBoar;
+	        return this.isBurning() ? LotsOMobsItems.BoarMeat : LotsOMobsItems.RawBoar;
 	    }
 
 	    /**
@@ -149,11 +149,11 @@ public class EntityBoar extends EntityAnimal
 	        {
 	            if (this.isBurning())
 	            {
-	                this.dropItem(LotsOMobs.BoarMeat, 1);
+	                this.dropItem(LotsOMobsItems.BoarMeat, 1);
 	            }
 	            else
 	            {
-	                this.dropItem(LotsOMobs.RawBoar, 1);
+	                this.dropItem(LotsOMobsItems.RawBoar, 1);
 	            }
 	        }
 	    }

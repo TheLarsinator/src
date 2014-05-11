@@ -17,7 +17,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityBear extends EntityAgeableMob
 {
@@ -65,7 +65,7 @@ public class EntityBear extends EntityAgeableMob
     }
   /*  protected void dropRareDrop(int par1)
     {
-        this.dropItem(LotsOMobs.BearHead.blockID, 1);
+        this.dropItem(LotsOMobsItems.BearHead.blockID, 1);
     }
 */
     /**
@@ -151,7 +151,7 @@ public class EntityBear extends EntityAgeableMob
     }
     public boolean isBreedingItem(ItemStack par1ItemStack)
     {
-        return par1ItemStack.getItem() == LotsOMobs.RawBoar;
+        return par1ItemStack.getItem() == LotsOMobsItems.RawBoar;
     }
 
 }

@@ -1,6 +1,5 @@
 package com.lom.lotsomobsentity;
 
-import net.minecraft.block.Block;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIControlledByPlayer;
@@ -13,13 +12,12 @@ import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityCamel extends EntityAnimal
 {
@@ -50,7 +48,7 @@ public class EntityCamel extends EntityAnimal
 	    public boolean interact(EntityPlayer var1)
 	    {/*
 	    	ItemStack itemstack = var1.getCurrentEquippedItem();
-	    	if (itemstack != null && itemstack.itemID == LotsOMobs.CamelBag.itemID)
+	    	if (itemstack != null && itemstack.itemID == LotsOMobsItems.CamelBag.itemID)
 	    	{
 	    	if (!worldObj.isRemote)
 	    	{
@@ -85,13 +83,13 @@ public class EntityCamel extends EntityAnimal
 	        this.tasks.addTask(0, new EntityAISwimming(this));
 	        this.tasks.addTask(1, new EntityAIPanic(this, 0.38F));
 	        this.tasks.addTask(2, new EntityAIMate(this, 0.2F));
-	        this.tasks.addTask(4, new EntityAITempt(this, 0.3F, LotsOMobs.CactiOnAStick, true));
+	        this.tasks.addTask(4, new EntityAITempt(this, 0.3F, LotsOMobsItems.CactiOnAStick, true));
 	        this.tasks.addTask(4, new EntityAITempt(this, 0.3F, Items.wheat, false));
 	        this.tasks.addTask(5, new EntityAIWander(this, 0.2F));
 	        this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
 	        this.tasks.addTask(7, new EntityAILookIdle(this));
 	        this.tasks.addTask(8, this.aiControlledByPlayer = new EntityAIControlledByPlayer(this, 16.0F));
-	        this.tasks.addTask(10, new EntityAITempt(this, 0.3F, LotsOMobs.CactiOnAStick, false));
+	        this.tasks.addTask(10, new EntityAITempt(this, 0.3F, LotsOMobsItems.CactiOnAStick, false));
 	        this.field_70279_a = true;
 	        this.field_70276_b = 0.07D;
 	        this.height = 1.2F;
@@ -104,7 +102,7 @@ public class EntityCamel extends EntityAnimal
 	    public boolean canBeSteered()
 	    {
 	        ItemStack var1 = ((EntityPlayer)this.riddenByEntity).getHeldItem();
-	        return var1 != null && var1.getItem() == LotsOMobs.CactiOnAStick;
+	        return var1 != null && var1.getItem() == LotsOMobsItems.CactiOnAStick;
 	    }
 
     /**
@@ -180,11 +178,11 @@ public class EntityCamel extends EntityAnimal
         {
             if (this.isBurning())
             {
-                this.dropItem(LotsOMobs.CamelMeat, 1);
+                this.dropItem(LotsOMobsItems.CamelMeat, 1);
             }
             else
             {
-                this.dropItem(LotsOMobs.RawCamel, 1);
+                this.dropItem(LotsOMobsItems.RawCamel, 1);
             }
         }
     }

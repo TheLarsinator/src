@@ -13,9 +13,7 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFire;
-import net.minecraft.block.BlockPortal;
 import net.minecraft.block.material.MapColor;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.AxisAlignedBB;
@@ -25,7 +23,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.google.common.collect.Maps;
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsBlocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -362,7 +360,7 @@ public class BlockAncientFire extends BlockFire
          */
         public void onBlockAdded(World par1World, int par2, int par3, int par4)
         {
-        	if ((par1World.getBlock(par2, par3 - 1, par4) != Blocks.mossy_cobblestone) || (!((BlockDinoPortal) LotsOMobs.DinoPortal).tryToCreatePortal(par1World, par2, par3, par4)))
+        	if ((par1World.getBlock(par2, par3 - 1, par4) != Blocks.mossy_cobblestone) || (!((BlockDinoPortal) LotsOMobsBlocks.DinoPortal).tryToCreatePortal(par1World, par2, par3, par4)))
         	{
         	if ((!par1World.doesBlockHaveSolidTopSurface(par1World, par2, par3 - 1, par4)) && (!canNeighborBurn(par1World, par2, par3, par4)))
         	{
@@ -373,7 +371,7 @@ public class BlockAncientFire extends BlockFire
         	par1World.scheduleBlockUpdate(par2, par3, par4, this, tickRate(par1World) + par1World.rand.nextInt(10));
         	}
         	}
-        	if ((par1World.getBlock(par2, par3 - 1, par4) != LotsOMobs.IceCobble) || (!((BlockIcePortal) LotsOMobs.IcePortal).tryToCreatePortal(par1World, par2, par3, par4)))
+        	if ((par1World.getBlock(par2, par3 - 1, par4) != LotsOMobsBlocks.IceCobble) || (!((BlockIcePortal) LotsOMobsBlocks.IcePortal).tryToCreatePortal(par1World, par2, par3, par4)))
         	{
         	if ((!par1World.doesBlockHaveSolidTopSurface(par1World, par2, par3 - 1, par4)) && (!canNeighborBurn(par1World, par2, par3, par4)))
         	{

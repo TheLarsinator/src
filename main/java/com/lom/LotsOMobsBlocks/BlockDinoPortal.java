@@ -8,7 +8,6 @@ import net.minecraft.block.BlockPortal;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -22,6 +21,7 @@ import net.minecraft.world.World;
 import com.lom.lotsomobscore.ConfigDetails;
 import com.lom.lotsomobscore.LotsOMobs;
 import com.lom.lotsomobsdino.TeleporterDino;
+import com.lom.lotsomobsinit.LotsOMobsBlocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -381,7 +381,7 @@ public class BlockDinoPortal extends BlockBreakable
                             break label56;
                         }
 
-                        if (block == LotsOMobs.DinoPortal)
+                        if (block == LotsOMobsBlocks.DinoPortal)
                         {
                             ++this.field_150864_e;
                         }
@@ -435,7 +435,7 @@ public class BlockDinoPortal extends BlockBreakable
 
             protected boolean func_150857_a(Block p_150857_1_)
             {
-                return p_150857_1_.getMaterial() == Material.air || p_150857_1_ == Blocks.fire || p_150857_1_ == LotsOMobs.DinoPortal;
+                return p_150857_1_.getMaterial() == Material.air || p_150857_1_ == Blocks.fire || p_150857_1_ == LotsOMobsBlocks.DinoPortal;
             }
 
             public boolean func_150860_b()
@@ -453,7 +453,7 @@ public class BlockDinoPortal extends BlockBreakable
                     for (int l = 0; l < this.field_150862_g; ++l)
                     {
                         int i1 = this.field_150861_f.posY + l;
-                        this.field_150867_a.setBlock(j, i1, k, LotsOMobs.DinoPortal, this.field_150865_b, 2);
+                        this.field_150867_a.setBlock(j, i1, k, LotsOMobsBlocks.DinoPortal, this.field_150865_b, 2);
                     }
                 }
             }
@@ -498,7 +498,7 @@ public class BlockDinoPortal extends BlockBreakable
              return false;
              }
              }
-             else if (j1 != Blocks.air && j1 != LotsOMobs.AncientFire)
+             else if (j1 != Blocks.air && j1 != LotsOMobsBlocks.AncientFire)
              {
              return false;
              }
@@ -509,7 +509,7 @@ public class BlockDinoPortal extends BlockBreakable
     {
     for (i1 = 0; i1 < 3; ++i1)
     {
-             par1World.setBlock(par2 + b0 * l, par3 + i1, par4 + b1 * l, LotsOMobs.DinoPortal, 0, 2);
+             par1World.setBlock(par2 + b0 * l, par3 + i1, par4 + b1 * l, LotsOMobsBlocks.DinoPortal, 0, 2);
     }
     }
     return true;

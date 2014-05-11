@@ -1,16 +1,12 @@
 package com.lom.lotsomobscrops;
 
-import javax.swing.Icon;
-
 import net.minecraft.block.BlockCrops;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
-import net.minecraft.world.World;
 
 import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -46,12 +42,12 @@ public class BlockTomato extends BlockCrops
     }
     protected Item func_149866_i()
     {
-        return LotsOMobs.Tomato;
+        return LotsOMobsItems.Tomato;
     }
 
     protected Item func_149865_P()
     {
-        return LotsOMobs.Tomato;
+        return LotsOMobsItems.Tomato;
     }
     /**
      * The type of render function that is called for this block

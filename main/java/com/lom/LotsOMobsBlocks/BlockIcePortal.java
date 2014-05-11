@@ -21,6 +21,7 @@ import net.minecraft.world.World;
 import com.lom.lotsomobscore.ConfigDetails;
 import com.lom.lotsomobscore.LotsOMobs;
 import com.lom.lotsomobsiceage.TeleporterIceAge;
+import com.lom.lotsomobsinit.LotsOMobsBlocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -347,14 +348,14 @@ public class BlockIcePortal extends BlockBreakable
 
                     Block block1 = this.field_150867_a.getBlock(p_150853_1_ + j1 * i1, p_150853_2_ - 1, p_150853_3_ + k1 * i1);
 
-                    if (block1 != LotsOMobs.IceCobble)
+                    if (block1 != LotsOMobsBlocks.IceCobble)
                     {
                         break;
                     }
                 }
 
                 block = this.field_150867_a.getBlock(p_150853_1_ + j1 * i1, p_150853_2_, p_150853_3_ + k1 * i1);
-                return block == LotsOMobs.IceCobble ? i1 : 0;
+                return block == LotsOMobsBlocks.IceCobble ? i1 : 0;
             }
 
             protected int func_150858_a()
@@ -380,7 +381,7 @@ public class BlockIcePortal extends BlockBreakable
                             break label56;
                         }
 
-                        if (block == LotsOMobs.IcePortal)
+                        if (block == LotsOMobsBlocks.IcePortal)
                         {
                             ++this.field_150864_e;
                         }
@@ -389,7 +390,7 @@ public class BlockIcePortal extends BlockBreakable
                         {
                             block = this.field_150867_a.getBlock(k + Direction.offsetX[BlockPortal.field_150001_a[this.field_150865_b][0]], i, l + Direction.offsetZ[BlockPortal.field_150001_a[this.field_150865_b][0]]);
 
-                            if (block != LotsOMobs.IceCobble)
+                            if (block != LotsOMobsBlocks.IceCobble)
                             {
                                 break label56;
                             }
@@ -398,7 +399,7 @@ public class BlockIcePortal extends BlockBreakable
                         {
                             block = this.field_150867_a.getBlock(k + Direction.offsetX[BlockPortal.field_150001_a[this.field_150865_b][1]], i, l + Direction.offsetZ[BlockPortal.field_150001_a[this.field_150865_b][1]]);
 
-                            if (block != LotsOMobs.IceCobble)
+                            if (block != LotsOMobsBlocks.IceCobble)
                             {
                                 break label56;
                             }
@@ -412,7 +413,7 @@ public class BlockIcePortal extends BlockBreakable
                     k = this.field_150861_f.posY + this.field_150862_g;
                     l = this.field_150861_f.posZ + i * Direction.offsetZ[BlockPortal.field_150001_a[this.field_150865_b][1]];
 
-                    if (this.field_150867_a.getBlock(j, k, l) != LotsOMobs.IceCobble)
+                    if (this.field_150867_a.getBlock(j, k, l) != LotsOMobsBlocks.IceCobble)
                     {
                         this.field_150862_g = 0;
                         break;
@@ -434,7 +435,7 @@ public class BlockIcePortal extends BlockBreakable
 
             protected boolean func_150857_a(Block p_150857_1_)
             {
-                return p_150857_1_.getMaterial() == Material.air || p_150857_1_ == Blocks.fire || p_150857_1_ == LotsOMobs.IcePortal;
+                return p_150857_1_.getMaterial() == Material.air || p_150857_1_ == Blocks.fire || p_150857_1_ == LotsOMobsBlocks.IcePortal;
             }
 
             public boolean func_150860_b()
@@ -452,7 +453,7 @@ public class BlockIcePortal extends BlockBreakable
                     for (int l = 0; l < this.field_150862_g; ++l)
                     {
                         int i1 = this.field_150861_f.posY + l;
-                        this.field_150867_a.setBlock(j, i1, k, LotsOMobs.IcePortal, this.field_150865_b, 2);
+                        this.field_150867_a.setBlock(j, i1, k, LotsOMobsBlocks.IcePortal, this.field_150865_b, 2);
                     }
                 }
             }
@@ -461,11 +462,11 @@ public class BlockIcePortal extends BlockBreakable
     {
     byte b0 = 0;
     byte b1 = 0;
-    if (par1World.getBlock(par2 - 1, par3, par4) == LotsOMobs.IceCobble || par1World.getBlock(par2 + 1, par3, par4) == LotsOMobs.IceCobble)
+    if (par1World.getBlock(par2 - 1, par3, par4) == LotsOMobsBlocks.IceCobble || par1World.getBlock(par2 + 1, par3, par4) == LotsOMobsBlocks.IceCobble)
     {
     b0 = 1;
     }
-    if (par1World.getBlock(par2, par3, par4 - 1) == LotsOMobs.IceCobble || par1World.getBlock(par2, par3, par4 + 1) == LotsOMobs.IceCobble)
+    if (par1World.getBlock(par2, par3, par4 - 1) == LotsOMobsBlocks.IceCobble || par1World.getBlock(par2, par3, par4 + 1) == LotsOMobsBlocks.IceCobble)
     {
     b1 = 1;
     }
@@ -492,12 +493,12 @@ public class BlockIcePortal extends BlockBreakable
              Block j1 = par1World.getBlock(par2 + b0 * l, par3 + i1, par4 + b1 * l);
              if (flag)
              {
-             if (j1 != LotsOMobs.IceCobble)
+             if (j1 != LotsOMobsBlocks.IceCobble)
              {
              return false;
              }
              }
-             else if (j1 != Blocks.air && j1 != LotsOMobs.AncientFire)
+             else if (j1 != Blocks.air && j1 != LotsOMobsBlocks.AncientFire)
              {
              return false;
              }
@@ -508,7 +509,7 @@ public class BlockIcePortal extends BlockBreakable
     {
     for (i1 = 0; i1 < 3; ++i1)
     {
-             par1World.setBlock(par2 + b0 * l, par3 + i1, par4 + b1 * l, LotsOMobs.IcePortal, 0, 2);
+             par1World.setBlock(par2 + b0 * l, par3 + i1, par4 + b1 * l, LotsOMobsBlocks.IcePortal, 0, 2);
     }
     }
     return true;

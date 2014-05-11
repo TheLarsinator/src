@@ -19,7 +19,7 @@ import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsBlocks;
 
 public class EntityEasterChick extends EntityAnimal
 {
@@ -113,19 +113,19 @@ public class EntityEasterChick extends EntityAnimal
             {
             case 1:
             	default:
-            	B = LotsOMobs.EasterEgg1;
+            	B = LotsOMobsBlocks.EasterEgg1;
             	this.dropItem(Item.getItemFromBlock(B), 1);
             case 2:
-            	B = LotsOMobs.EasterEgg2;
+            	B = LotsOMobsBlocks.EasterEgg2;
             	this.dropItem(Item.getItemFromBlock(B), 1);
             case 3:
-            	B = LotsOMobs.EasterEgg3;
+            	B = LotsOMobsBlocks.EasterEgg3;
             	this.dropItem(Item.getItemFromBlock(B), 1);
             case 4:
-            	B = LotsOMobs.EasterEgg4;
+            	B = LotsOMobsBlocks.EasterEgg4;
             	this.dropItem(Item.getItemFromBlock(B), 1);
             case 5:
-            	B = LotsOMobs.EasterEgg5;	
+            	B = LotsOMobsBlocks.EasterEgg5;	
             	this.dropItem(Item.getItemFromBlock(B), 1);
             }
             this.timeUntilNextEgg = this.rand.nextInt(6000) + 6000;

@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 
 import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsBlocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -22,7 +23,7 @@ public class BlockIceStone extends Block
 
 public Item getItemDropped(int par1, Random par2Random, int par3)
 {
-        return Item.getItemFromBlock(LotsOMobs.IceCobble);
+        return Item.getItemFromBlock(LotsOMobsBlocks.IceCobble);
 }
 @Override
 @SideOnly(Side.CLIENT)

@@ -7,10 +7,8 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 
-import com.lom.lotsomobsbiomes.BiomeGenAntartica;
-import com.lom.lotsomobsbiomes.BiomeGenArcticOcean;
 import com.lom.lotsomobscore.ConfigDetails;
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsBlocks;
 
 import cpw.mods.fml.common.IWorldGenerator;
 
@@ -85,7 +83,7 @@ public void generateDinoAge(World world, Random rand, int chunkX, int chunkZ) {
 		int randPosY = rand.nextInt(7);
 		int randPosZ = chunkZ + rand.nextInt(16);
 
-		(new WorldGenMinable(LotsOMobs.AmberOre, 10)).generate(world, rand,
+		(new WorldGenMinable(LotsOMobsBlocks.AmberOre, 10)).generate(world, rand,
 		randPosX, randPosY, randPosZ);
 		}
 	}
@@ -95,7 +93,7 @@ public void generateIceAge(World world, Random rand, int chunkX, int chunkZ) {
 	int randPosY = rand.nextInt(7);
 	int randPosZ = chunkZ + rand.nextInt(16);
 
-	(new WorldGenMineableIce(LotsOMobs.IcemintuimOre, 10)).generate(world, rand,
+	(new WorldGenMineableIce(LotsOMobsBlocks.IcemintuimOre, 10)).generate(world, rand,
 	randPosX, randPosY, randPosZ);
 	}
 	for (int i = 0; i < 15; i++) {
@@ -103,7 +101,7 @@ public void generateIceAge(World world, Random rand, int chunkX, int chunkZ) {
 	int randPosY = rand.nextInt(128);
 	int randPosZ = chunkZ + rand.nextInt(16);
 
-	(new WorldGenMineableIce(LotsOMobs.IceCoal, 10)).generate(world, rand,
+	(new WorldGenMineableIce(LotsOMobsBlocks.IceCoal, 10)).generate(world, rand,
 	randPosX, randPosY, randPosZ);
 	}
 	for (int i = 0; i < 15; i++) {
@@ -111,7 +109,7 @@ public void generateIceAge(World world, Random rand, int chunkX, int chunkZ) {
 	int randPosY = rand.nextInt(51);
 	int randPosZ = chunkZ + rand.nextInt(16);
 
-	(new WorldGenMineableIce(LotsOMobs.IceIron, 10)).generate(world, rand,
+	(new WorldGenMineableIce(LotsOMobsBlocks .IceIron, 10)).generate(world, rand,
 	randPosX, randPosY, randPosZ);
 	}
 }

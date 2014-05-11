@@ -1,7 +1,5 @@
 package com.lom.lotsomobsentity;
 
-import com.lom.lotsomobscore.LotsOMobs;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockColored;
 import net.minecraft.entity.Entity;
@@ -9,7 +7,6 @@ import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
-import net.minecraft.entity.ai.EntityAIBeg;
 import net.minecraft.entity.ai.EntityAIFollowOwner;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
 import net.minecraft.entity.ai.EntityAILeapAtTarget;
@@ -18,14 +15,12 @@ import net.minecraft.entity.ai.EntityAIMate;
 import net.minecraft.entity.ai.EntityAIOwnerHurtByTarget;
 import net.minecraft.entity.ai.EntityAIOwnerHurtTarget;
 import net.minecraft.entity.ai.EntityAISwimming;
-import net.minecraft.entity.ai.EntityAITargetNonTamed;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.monster.EntityGhast;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.passive.EntityHorse;
-import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.entity.passive.EntityTameable;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
@@ -38,6 +33,9 @@ import net.minecraft.pathfinding.PathEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+
+import com.lom.lotsomobsinit.LotsOMobsItems;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -200,7 +198,7 @@ public class EntityKakkerlak extends EntityTameable
 
     protected Item getDropItem()
     {
-        return LotsOMobs.SmashedBug;
+        return LotsOMobsItems.SmashedBug;
     }
 
     /**

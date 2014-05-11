@@ -13,6 +13,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -204,6 +205,6 @@ public class BlockEasterCake extends Block
     @SideOnly(Side.CLIENT)
     public Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
     {
-        return LotsOMobs.EasterCake1;
+        return LotsOMobsItems.EasterCake1;
     }
 }

@@ -16,7 +16,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityBrontosaurus extends EntityAnimal
 {
@@ -73,7 +73,7 @@ public class EntityBrontosaurus extends EntityAnimal
      */
     protected String getDeathSound()
     {
-        return "LotsOMobs.brontosaurus";
+        return "LotsOMobsItems.brontosaurus";
     }
 
     /**
@@ -81,7 +81,7 @@ public class EntityBrontosaurus extends EntityAnimal
      */
     protected void playStepSound(int par1, int par2, int par3, int par4)
     {
-        this.worldObj.playSoundAtEntity(this, "LotsOMobs.TRexFootstep", 0.15F, 1.0F);
+        this.worldObj.playSoundAtEntity(this, "LotsOMobsItems.TRexFootstep", 0.15F, 1.0F);
     }
 
     /**
@@ -97,7 +97,7 @@ public class EntityBrontosaurus extends EntityAnimal
      */
     protected Item getDropItem()
     {
-    	return LotsOMobs.DinoBone;
+    	return LotsOMobsItems.DinoBone;
     }
 
     /**
@@ -107,8 +107,8 @@ public class EntityBrontosaurus extends EntityAnimal
     {
         int var3 = this.rand.nextInt(3) + this.rand.nextInt(1 + par2);
         int var4;
-        	this.dropItem(LotsOMobs.DinoBone, 1);
-        	this.dropItem(LotsOMobs.DinoFur, 1);
+        	this.dropItem(LotsOMobsItems.DinoBone, 1);
+        	this.dropItem(LotsOMobsItems.DinoFur, 1);
         
 
         var3 = this.rand.nextInt(3) + 1 + this.rand.nextInt(1 + par2);

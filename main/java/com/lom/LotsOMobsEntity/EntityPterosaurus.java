@@ -13,7 +13,7 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityPterosaurus extends EntityFlying implements IMob
 {
@@ -218,7 +218,7 @@ public class EntityPterosaurus extends EntityFlying implements IMob
      */
     protected Item getDropItem()
     {
-        return LotsOMobs.DinoFur;
+        return LotsOMobsItems.DinoFur;
     }
     
 
@@ -229,7 +229,7 @@ public class EntityPterosaurus extends EntityFlying implements IMob
     {
 
 	   	{
-            this.dropItem(LotsOMobs.DinoBone, 4);
+            this.dropItem(LotsOMobsItems.DinoBone, 4);
         }
     }
 

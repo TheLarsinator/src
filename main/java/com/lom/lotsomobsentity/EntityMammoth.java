@@ -19,6 +19,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityMammoth extends EntityAnimal
 {
@@ -34,7 +35,7 @@ public class EntityMammoth extends EntityAnimal
 	        this.tasks.addTask(5, new EntityAIWander(this, 0.2F));
 	        this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
 	        this.tasks.addTask(7, new EntityAILookIdle(this));
-	        this.tasks.addTask(10, new EntityAITempt(this, 0.3F, LotsOMobs.CactiOnAStick, false));
+	        this.tasks.addTask(10, new EntityAITempt(this, 0.3F, LotsOMobsItems.CactiOnAStick, false));
 	        this.height = 5.8F;
 	        this.experienceValue = 450;
 	    }
@@ -91,7 +92,7 @@ public class EntityMammoth extends EntityAnimal
      */
     protected Item getDropItem()
     {
-        return LotsOMobs.Ivory;
+        return LotsOMobsItems.Ivory;
     }
 
     /**
@@ -99,15 +100,15 @@ public class EntityMammoth extends EntityAnimal
      */
     protected void dropFewItems(boolean par1, int par2)
     {
-        this.dropItem(LotsOMobs.WoolyFur, 2);
+        this.dropItem(LotsOMobsItems.WoolyFur, 2);
         {
             if (this.isBurning())
             {
-                this.dropItem(LotsOMobs.MammothMeat, 1);
+                this.dropItem(LotsOMobsItems.MammothMeat, 1);
             }
             else
             {
-                this.dropItem(LotsOMobs.RawMammoth, 1);
+                this.dropItem(LotsOMobsItems.RawMammoth, 1);
             }
         }
     }

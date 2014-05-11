@@ -11,6 +11,7 @@ import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsBlocks;
 
 public class WorldGenBigDinoTree extends WorldGenAbstractTree
 {
@@ -337,19 +338,19 @@ public class WorldGenBigDinoTree extends WorldGenAbstractTree
         int l = this.basePos[2];
         int[] aint = new int[] {i, j, l};
         int[] aint1 = new int[] {i, k, l};
-        this.func_150530_a(aint, aint1, LotsOMobs.DinoLog);
+        this.func_150530_a(aint, aint1, LotsOMobsBlocks.DinoLog);
 
         if (this.trunkSize == 2)
         {
             ++aint[0];
             ++aint1[0];
-            this.func_150530_a(aint, aint1, LotsOMobs.DinoLog);
+            this.func_150530_a(aint, aint1, LotsOMobsBlocks.DinoLog);
             ++aint[2];
             ++aint1[2];
-            this.func_150530_a(aint, aint1, LotsOMobs.DinoLog);
+            this.func_150530_a(aint, aint1, LotsOMobsBlocks.DinoLog);
             aint[0] += -1;
             aint1[0] += -1;
-            this.func_150530_a(aint, aint1, LotsOMobs.DinoLog);
+            this.func_150530_a(aint, aint1, LotsOMobsBlocks.DinoLog);
         }
     }
 
@@ -370,7 +371,7 @@ public class WorldGenBigDinoTree extends WorldGenAbstractTree
 
             if (this.leafNodeNeedsBase(k))
             {
-                this.func_150530_a(aint, aint2, LotsOMobs.DinoLog);
+                this.func_150530_a(aint, aint2, LotsOMobsBlocks.DinoLog);
             }
         }
     }

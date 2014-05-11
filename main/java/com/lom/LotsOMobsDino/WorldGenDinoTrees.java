@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraftforge.common.util.ForgeDirection;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsBlocks;
 
 public class WorldGenDinoTrees extends WorldGenAbstractTree
 {
@@ -143,7 +143,7 @@ public class WorldGenDinoTrees extends WorldGenAbstractTree
 
                         if (block.isAir(par1World, par3, par4 + k1, par5) || block.isLeaves(par1World, par3, par4 + k1, par5))
                         {
-                            this.setBlockAndNotifyAdequately(par1World, par3, par4 + k1, par5, LotsOMobs.DinoLog, this.metaWood);
+                            this.setBlockAndNotifyAdequately(par1World, par3, par4 + k1, par5, LotsOMobsBlocks.DinoLog, this.metaWood);
 
                             if (this.vinesGrow && k1 > 0)
                             {

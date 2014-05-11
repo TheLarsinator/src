@@ -1,11 +1,5 @@
 package com.lom.lotsomobsiceage;
 
-import static net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.CAVE;
-import static net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.MINESHAFT;
-import static net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.RAVINE;
-import static net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.SCATTERED_FEATURE;
-import static net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.STRONGHOLD;
-import static net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.VILLAGE;
 import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.EventType.DUNGEON;
 import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.EventType.ICE;
 import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.EventType.LAKE;
@@ -13,8 +7,6 @@ import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.Ev
 
 import java.util.List;
 import java.util.Random;
-
-import com.lom.lotsomobscore.LotsOMobs;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFalling;
@@ -38,13 +30,13 @@ import net.minecraft.world.gen.NoiseGeneratorPerlin;
 import net.minecraft.world.gen.feature.WorldGenDungeons;
 import net.minecraft.world.gen.feature.WorldGenLakes;
 import net.minecraft.world.gen.structure.MapGenMineshaft;
-import net.minecraft.world.gen.structure.MapGenScatteredFeature;
-import net.minecraft.world.gen.structure.MapGenStronghold;
-import net.minecraft.world.gen.structure.MapGenVillage;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.ChunkProviderEvent;
 import net.minecraftforge.event.terraingen.PopulateChunkEvent;
 import net.minecraftforge.event.terraingen.TerrainGen;
+
+import com.lom.lotsomobsinit.LotsOMobsBlocks;
+
 import cpw.mods.fml.common.eventhandler.Event.Result;
 
 public class ChunkProviderIceAge implements IChunkProvider
@@ -203,7 +195,7 @@ public class ChunkProviderIceAge implements IChunkProvider
                             {
                                 if ((d15 += d16) > 0.0D)
                                 {
-                                    p_147424_3_[j3 += short1] = LotsOMobs.IceStone;
+                                    p_147424_3_[j3 += short1] = LotsOMobsBlocks.IceStone;
                                 }
                                 else if (k2 * 8 + l2 < b0)
                                 {

@@ -17,12 +17,11 @@ import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -162,7 +161,7 @@ protected void applyEntityAttributes()
 
      for (k = 0; k < j; ++k)
      {
-         this.dropItem(LotsOMobs.WoolyFur, 2);
+         this.dropItem(LotsOMobsItems.WoolyFur, 2);
      }
 
      j = this.rand.nextInt(3) + 1 + this.rand.nextInt(1 + par2);
@@ -171,11 +170,11 @@ protected void applyEntityAttributes()
      {
          if (this.isBurning())
          {
-             this.dropItem(LotsOMobs.LionMeat, 2);
+             this.dropItem(LotsOMobsItems.LionMeat, 2);
          }
          else
          {
-             this.dropItem(LotsOMobs.RawLion, 2);
+             this.dropItem(LotsOMobsItems.RawLion, 2);
          }
      }
     }

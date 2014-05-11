@@ -8,7 +8,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenHugeTrees;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsBlocks;
 
 public class WorldGenMegaDinoTree extends WorldGenHugeTrees
 {
@@ -42,7 +42,7 @@ public class WorldGenMegaDinoTree extends WorldGenHugeTrees
                 {
                     j1 = par3 + (int)(1.5F + MathHelper.cos(f) * (float)l1);
                     k1 = par5 + (int)(1.5F + MathHelper.sin(f) * (float)l1);
-                    this.setBlockAndNotifyAdequately(par1World, j1, i1 - 3 + l1 / 2, k1, LotsOMobs.DinoLog, this.woodMetadata);
+                    this.setBlockAndNotifyAdequately(par1World, j1, i1 - 3 + l1 / 2, k1, LotsOMobsBlocks.DinoLog, this.woodMetadata);
                 }
 
                 l1 = 1 + par2Random.nextInt(2);
@@ -61,7 +61,7 @@ public class WorldGenMegaDinoTree extends WorldGenHugeTrees
 
                 if (block.isAir(par1World, par3, par4 + l2, par5) || block.isLeaves(par1World, par3, par4 + l2, par5))
                 {
-                    this.setBlockAndNotifyAdequately(par1World, par3, par4 + l2, par5, LotsOMobs.DinoLog, this.woodMetadata);
+                    this.setBlockAndNotifyAdequately(par1World, par3, par4 + l2, par5, LotsOMobsBlocks.DinoLog, this.woodMetadata);
 
                     if (l2 > 0)
                     {
@@ -83,7 +83,7 @@ public class WorldGenMegaDinoTree extends WorldGenHugeTrees
 
                     if (block.isAir(par1World, par3 + 1, par4 + l2, par5) || block.isLeaves(par1World, par3 + 1, par4 + l2, par5))
                     {
-                        this.setBlockAndNotifyAdequately(par1World, par3 + 1, par4 + l2, par5, LotsOMobs.DinoLog, this.woodMetadata);
+                        this.setBlockAndNotifyAdequately(par1World, par3 + 1, par4 + l2, par5, LotsOMobsBlocks.DinoLog, this.woodMetadata);
 
                         if (l2 > 0)
                         {
@@ -103,7 +103,7 @@ public class WorldGenMegaDinoTree extends WorldGenHugeTrees
 
                     if (block.isAir(par1World, par3 + 1, par4 + l2, par5 + 1) || block.isLeaves(par1World, par3 + 1, par4 + l2, par5 + 1))
                     {
-                        this.setBlockAndNotifyAdequately(par1World, par3 + 1, par4 + l2, par5 + 1, LotsOMobs.DinoLog, this.woodMetadata);
+                        this.setBlockAndNotifyAdequately(par1World, par3 + 1, par4 + l2, par5 + 1, LotsOMobsBlocks.DinoLog, this.woodMetadata);
 
                         if (l2 > 0)
                         {
@@ -123,7 +123,7 @@ public class WorldGenMegaDinoTree extends WorldGenHugeTrees
 
                     if (block.isAir(par1World, par3, par4 + l2, par5 + 1) || block.isLeaves(par1World, par3, par4 + l2, par5 + 1))
                     {
-                        this.setBlockAndNotifyAdequately(par1World, par3, par4 + l2, par5 + 1, LotsOMobs.DinoLog, this.woodMetadata);
+                        this.setBlockAndNotifyAdequately(par1World, par3, par4 + l2, par5 + 1, LotsOMobsBlocks.DinoLog, this.woodMetadata);
 
                         if (l2 > 0)
                         {

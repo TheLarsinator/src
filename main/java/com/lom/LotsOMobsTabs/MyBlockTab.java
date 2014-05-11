@@ -1,11 +1,10 @@
 package com.lom.lotsomobstabs;
 
 
-import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsBlocks;
 
 public class MyBlockTab extends CreativeTabs
 {
@@ -16,6 +15,6 @@ public class MyBlockTab extends CreativeTabs
 
 	@Override
 	public Item getTabIconItem() {
-		return Item.getItemFromBlock(LotsOMobs.EasterEgg1);
+		return Item.getItemFromBlock(LotsOMobsBlocks.EasterEgg1);
 	}
 }

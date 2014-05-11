@@ -1,9 +1,9 @@
 package com.lom.lotsomobsbiomes;
 
-import com.lom.lotsomobscore.LotsOMobs;
-
 import net.minecraft.init.Blocks;
 import net.minecraft.world.biome.BiomeGenBase;
+
+import com.lom.lotsomobsinit.LotsOMobsBlocks;
 
 public class BiomeGenIceMountains extends BiomeGenBase
 {
@@ -15,7 +15,7 @@ public class BiomeGenIceMountains extends BiomeGenBase
         this.setHeight(height_MidHills);
         this.spawnableCreatureList.clear();
         this.topBlock = Blocks.snow;
-        this.fillerBlock = LotsOMobs.IceStone;
+        this.fillerBlock = LotsOMobsBlocks.IceStone;
         this.getEnableSnow();
         this.setTemperatureRainfall(0.1F, 17F);       
         this.spawnableMonsterList.clear();

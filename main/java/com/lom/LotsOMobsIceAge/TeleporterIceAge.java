@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Random;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.Direction;
 import net.minecraft.util.LongHashMap;
 import net.minecraft.util.MathHelper;
@@ -13,7 +12,7 @@ import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.Teleporter;
 import net.minecraft.world.WorldServer;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsBlocks;
 public class TeleporterIceAge extends Teleporter
 {
 private final WorldServer worldServerInstance;
@@ -64,7 +63,7 @@ public void placeInPortal(Entity par1Entity, double par2, double par4, double pa
                                          boolean flag = j1 < 0;
                                         
                                          /** change this block **/
-                                         this.worldServerInstance.setBlock(k1, l1, i2, LotsOMobs.IceCobble, 0, 0);
+                                         this.worldServerInstance.setBlock(k1, l1, i2, LotsOMobsBlocks.IceCobble, 0, 0);
                                  }
                          }
                  }
@@ -109,10 +108,10 @@ public boolean placeInExistingPortal(Entity par1Entity, double par2, double par4
                                  for (int i2 = this.worldServerInstance.getActualHeight() - 1; i2 >= 0; --i2)
                                  {
                                          /** change this block **/
-                                         if (this.worldServerInstance.getBlock(k1, i2, l1) == LotsOMobs.IcePortal)
+                                         if (this.worldServerInstance.getBlock(k1, i2, l1) == LotsOMobsBlocks.IcePortal)
                                          {
                                                  /** change this block **/
-                                                 while (this.worldServerInstance.getBlock(k1, i2 - 1, l1) == LotsOMobs.IcePortal)
+                                                 while (this.worldServerInstance.getBlock(k1, i2 - 1, l1) == LotsOMobsBlocks.IcePortal)
                                                  {
                                                          --i2;
                                                  }
@@ -142,22 +141,22 @@ public boolean placeInExistingPortal(Entity par1Entity, double par2, double par4
                  d4 = (double)k + 0.5D;
                  int j2 = -1;
                  /** change this block **/
-                 if (this.worldServerInstance.getBlock(i - 1, j, k) == LotsOMobs.IcePortal)
+                 if (this.worldServerInstance.getBlock(i - 1, j, k) == LotsOMobsBlocks.IcePortal)
                  {
                          j2 = 2;
                  }
                  /** change this block **/
-                 if (this.worldServerInstance.getBlock(i + 1, j, k) == LotsOMobs.IcePortal)
+                 if (this.worldServerInstance.getBlock(i + 1, j, k) == LotsOMobsBlocks.IcePortal)
                  {
                          j2 = 0;
                  }
                  /** change this block **/
-                 if (this.worldServerInstance.getBlock(i, j, k - 1) == LotsOMobs.IcePortal)
+                 if (this.worldServerInstance.getBlock(i, j, k - 1) == LotsOMobsBlocks.IcePortal)
                  {
                          j2 = 3;
                  }
                  /** change this block **/
-                 if (this.worldServerInstance.getBlock(i, j, k + 1) == LotsOMobs.IcePortal)
+                 if (this.worldServerInstance.getBlock(i, j, k + 1) == LotsOMobsBlocks.IcePortal)
                  {
                          j2 = 1;
                  }
@@ -410,7 +409,7 @@ public boolean makePortal(Entity par1Entity)
                                          flag = l2 < 0;
                                         
                                          /** change this block **/
-                                         this.worldServerInstance.setBlock(k3, j3, i4, LotsOMobs.IceCobble, 0, 0);
+                                         this.worldServerInstance.setBlock(k3, j3, i4, LotsOMobsBlocks.IceCobble, 0, 0);
                                  }
                          }
                  }
@@ -427,7 +426,7 @@ public boolean makePortal(Entity par1Entity)
                                  flag = i3 == 0 || i3 == 3 || l2 == -1 || l2 == 3;
                                 
                                  /** change these blocks **/
-                                 this.worldServerInstance.setBlock(k3, j3, i4, flag ? LotsOMobs.IceCobble : LotsOMobs.IcePortal, 0, 2);
+                                 this.worldServerInstance.setBlock(k3, j3, i4, flag ? LotsOMobsBlocks.IceCobble : LotsOMobsBlocks.IcePortal, 0, 2);
                          }
                  }
                  for (i3 = 0; i3 < 4; ++i3)

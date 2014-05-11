@@ -1,15 +1,12 @@
 package com.lom.lotsomobsentity;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.item.Item;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntitySnake extends EntityMob
 {
@@ -31,7 +28,7 @@ public class EntitySnake extends EntityMob
      */
     protected Item getDropItem()
     {
-        return LotsOMobs.RawReptile;
+        return LotsOMobsItems.RawReptile;
     }
     
     /**

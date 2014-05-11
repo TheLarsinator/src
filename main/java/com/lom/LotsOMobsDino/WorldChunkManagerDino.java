@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import com.lom.lotsomobscore.LotsOMobs;
-
 import net.minecraft.world.ChunkPosition;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
@@ -14,6 +12,9 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
+
+import com.lom.lotsomobsinit.LotsOMobsBiomes;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -28,11 +29,11 @@ protected WorldChunkManagerDino()
 {
 this.myBiomeCache = new BiomeCache(this);
 this.myBiomesToSpawnIn = new ArrayList<BiomeGenBase>();
-this.myBiomesToSpawnIn.add(LotsOMobs.modBiomeDinoIslands);
-this.myBiomesToSpawnIn.add(LotsOMobs.modBiomeDinoJungle);
-this.myBiomesToSpawnIn.add(LotsOMobs.modBiomeDinoMountains);
-this.myBiomesToSpawnIn.add(LotsOMobs.modBiomeDinoOcean);
-this.myBiomesToSpawnIn.add(LotsOMobs.modBiomeDinoPlains);
+this.myBiomesToSpawnIn.add(LotsOMobsBiomes.modBiomeDinoIslands);
+this.myBiomesToSpawnIn.add(LotsOMobsBiomes.modBiomeDinoJungle);
+this.myBiomesToSpawnIn.add(LotsOMobsBiomes.modBiomeDinoMountains);
+this.myBiomesToSpawnIn.add(LotsOMobsBiomes.modBiomeDinoOcean);
+this.myBiomesToSpawnIn.add(LotsOMobsBiomes.modBiomeDinoPlains);
 }
 
 public WorldChunkManagerDino(long seed, WorldType worldtype)
@@ -65,7 +66,7 @@ public BiomeGenBase getBiomeGenAt(int x, int z)
 BiomeGenBase biome = this.myBiomeCache.getBiomeGenAt(x, z);
 if (biome == null)
 {
-return LotsOMobs.modBiomeDinoJungle;
+return LotsOMobsBiomes.modBiomeDinoJungle;
 }
 
 return biome;
@@ -155,7 +156,7 @@ if (aint[i] >= 0) {
 par1ArrayOfBiomeGenBase[i] = BiomeGenBase.getBiomeGenArray()[aint[i]];
 } else {
 //Change this to a biome
-par1ArrayOfBiomeGenBase[i] = LotsOMobs.modBiomeDinoJungle;
+par1ArrayOfBiomeGenBase[i] = LotsOMobsBiomes.modBiomeDinoJungle;
 }
 }
 
@@ -195,7 +196,7 @@ if (aint[i] >= 0) {
 par1ArrayOfBiomeGenBase[i] = BiomeGenBase.getBiomeGenArray()[aint[i]];
 } else {
 //Change this to a biome
-par1ArrayOfBiomeGenBase[i] = LotsOMobs.modBiomeDinoJungle;
+par1ArrayOfBiomeGenBase[i] = LotsOMobsBiomes.modBiomeDinoJungle;
 }
 }
 

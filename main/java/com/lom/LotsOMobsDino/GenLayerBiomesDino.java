@@ -1,14 +1,14 @@
 package com.lom.lotsomobsdino;
 
-import com.lom.lotsomobscore.LotsOMobs;
-
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 
+import com.lom.lotsomobsinit.LotsOMobsBiomes;
+
 public class GenLayerBiomesDino extends GenLayer {
 
-	protected BiomeGenBase[] allowedBiomes = {LotsOMobs.modBiomeDinoIslands, LotsOMobs.modBiomeDinoJungle, LotsOMobs.modBiomeDinoMountains, LotsOMobs.modBiomeDinoOcean, LotsOMobs.modBiomeDinoPlains};
+	protected BiomeGenBase[] allowedBiomes = {LotsOMobsBiomes.modBiomeDinoIslands, LotsOMobsBiomes.modBiomeDinoJungle, LotsOMobsBiomes.modBiomeDinoMountains, LotsOMobsBiomes.modBiomeDinoOcean, LotsOMobsBiomes.modBiomeDinoPlains};
 
 	public GenLayerBiomesDino(long seed, GenLayer genlayer) {
 	super(seed);

@@ -1,13 +1,11 @@
 package com.lom.lotsomobsentity;
 
-import net.minecraft.block.BlockColored;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIControlledByPlayer;
-import net.minecraft.entity.ai.EntityAIFollowOwner;
 import net.minecraft.entity.ai.EntityAIFollowParent;
 import net.minecraft.entity.ai.EntityAILeapAtTarget;
 import net.minecraft.entity.ai.EntityAILookIdle;
@@ -26,16 +24,13 @@ import net.minecraft.entity.passive.EntityTameable;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.pathfinding.PathEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -96,7 +91,7 @@ public class EntityTriceratops extends EntityTameable
         this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityTRex.class, 0, false));
         this.targetTasks.addTask(4, new EntityAITargetNonTamed(this, EntityPlayer.class, 200, false));
         this.tasks.addTask(8, this.aiControlledByPlayer = new EntityAIControlledByPlayer(this, 16.0F));
-        this.tasks.addTask(10, new EntityAITempt(this, 0.3F, LotsOMobs.CactiOnAStick, false));
+        this.tasks.addTask(10, new EntityAITempt(this, 0.3F, LotsOMobsItems.CactiOnAStick, false));
         this.field_70279_a = true;
         this.field_70276_b = 0.07D;
         this.height = 3.5F;
@@ -109,7 +104,7 @@ public class EntityTriceratops extends EntityTameable
     public boolean canBeSteered()
     {
         ItemStack var1 = ((EntityPlayer)this.riddenByEntity).getHeldItem();
-        return var1 != null && var1.getItem() == LotsOMobs.CactiOnAStick;
+        return var1 != null && var1.getItem() == LotsOMobsItems.CactiOnAStick;
     }
     
 
@@ -168,7 +163,7 @@ public class EntityTriceratops extends EntityTameable
      */
     protected void playStepSound(int par1, int par2, int par3, int par4)
     {
-        this.playSound("LotsOMobs.TRexFootStep", 0.15F, 1.0F);
+        this.playSound("LotsOMobsItems.TRexFootStep", 0.15F, 1.0F);
     }
 
     @SideOnly(Side.CLIENT)
@@ -248,8 +243,8 @@ public class EntityTriceratops extends EntityTameable
     {
         int var3 = this.rand.nextInt(3) + this.rand.nextInt(1 + par2);
         int var4;
-        	this.dropItem(LotsOMobs.DinoBone, 1);
-        	this.dropItem(LotsOMobs.DinoFur, 1);
+        	this.dropItem(LotsOMobsItems.DinoBone, 1);
+        	this.dropItem(LotsOMobsItems.DinoFur, 1);
         
 
         var3 = this.rand.nextInt(3) + 1 + this.rand.nextInt(1 + par2);
@@ -317,7 +312,7 @@ public class EntityTriceratops extends EntityTameable
         {
             if (this.timeWolfIsShaking == 0.0F)
             {
-                this.playSound("LotsOMobs.Triceratops", this.getSoundVolume(), (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
+                this.playSound("LotsOMobsItems.Triceratops", this.getSoundVolume(), (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
             }
 
             this.prevTimeWolfIsShaking = this.timeWolfIsShaking;

@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import com.lom.lotsomobscore.LotsOMobs;
-
 import net.minecraft.world.ChunkPosition;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
@@ -14,6 +12,10 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
+
+import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsBiomes;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -28,10 +30,10 @@ protected WorldChunkManagerIceAge()
 {
 this.myBiomeCache = new BiomeCache(this);
 this.myBiomesToSpawnIn = new ArrayList<BiomeGenBase>();
-this.myBiomesToSpawnIn.add(LotsOMobs.modBiomeIceIslands);
-this.myBiomesToSpawnIn.add(LotsOMobs.modBiomeIceMountains);
-this.myBiomesToSpawnIn.add(LotsOMobs.modBiomeIceOcean);
-this.myBiomesToSpawnIn.add(LotsOMobs.modBiomeIcePlains);
+this.myBiomesToSpawnIn.add(LotsOMobsBiomes.modBiomeIceIslands);
+this.myBiomesToSpawnIn.add(LotsOMobsBiomes.modBiomeIceMountains);
+this.myBiomesToSpawnIn.add(LotsOMobsBiomes.modBiomeIceOcean);
+this.myBiomesToSpawnIn.add(LotsOMobsBiomes.modBiomeIcePlains);
 }
 
 public WorldChunkManagerIceAge(long seed, WorldType worldtype)
@@ -64,7 +66,7 @@ public BiomeGenBase getBiomeGenAt(int x, int z)
 BiomeGenBase biome = this.myBiomeCache.getBiomeGenAt(x, z);
 if (biome == null)
 {
-return LotsOMobs.modBiomeIcePlains;
+return LotsOMobsBiomes.modBiomeIcePlains;
 }
 
 return biome;
@@ -154,7 +156,7 @@ if (aint[i] >= 0) {
 par1ArrayOfBiomeGenBase[i] = BiomeGenBase.getBiomeGenArray()[aint[i]];
 } else {
 //Change this to a biome
-par1ArrayOfBiomeGenBase[i] = LotsOMobs.modBiomeIcePlains;
+par1ArrayOfBiomeGenBase[i] = LotsOMobsBiomes.modBiomeIcePlains;
 }
 }
 
@@ -194,7 +196,7 @@ if (aint[i] >= 0) {
 par1ArrayOfBiomeGenBase[i] = BiomeGenBase.getBiomeGenArray()[aint[i]];
 } else {
 //Change this to a biome
-par1ArrayOfBiomeGenBase[i] = LotsOMobs.modBiomeIcePlains;
+par1ArrayOfBiomeGenBase[i] = LotsOMobsBiomes.modBiomeIcePlains;
 }
 }
 

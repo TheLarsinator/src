@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityWhale extends EntityWaterMob 
 {
@@ -87,7 +87,7 @@ public class EntityWhale extends EntityWaterMob
 
         for (int var4 = 0; var4 < var3; ++var4)
         {
-            this.entityDropItem(new ItemStack(LotsOMobs.RawWhale, 3, 0), 0.0F);
+            this.entityDropItem(new ItemStack(LotsOMobsItems.RawWhale, 3, 0), 0.0F);
         }
     }
 

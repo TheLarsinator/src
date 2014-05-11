@@ -1,16 +1,12 @@
 package com.lom.lotsomobsitems;
 
-import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemFlintAndSteel;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.lom.lotsomobscore.LotsOMobs;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import com.lom.lotsomobsinit.LotsOMobsBlocks;
 
 public class ItemFlintAndFossil extends Item
 {
@@ -67,7 +63,7 @@ public class ItemFlintAndFossil extends Item
             if (par3World.isAirBlock(par4, par5, par6))
             {
                 par3World.playSoundEffect((double)par4 + 0.5D, (double)par5 + 0.5D, (double)par6 + 0.5D, "fire.ignite", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
-                par3World.setBlock(par4, par5, par6, LotsOMobs.AncientFire);
+                par3World.setBlock(par4, par5, par6, LotsOMobsBlocks.AncientFire);
             }
 
             par1ItemStack.damageItem(1, par2EntityPlayer);

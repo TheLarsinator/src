@@ -13,11 +13,9 @@ import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityWinterDeer extends EntityAnimal 
 {
@@ -92,7 +90,7 @@ public class EntityWinterDeer extends EntityAnimal
     }
    /* protected void dropRareDrop(int par1)
     {
-        this.dropItem(LotsOMobs.WinterDeerHead.blockID, 1);
+        this.dropItem(LotsOMobsItems.WinterDeerHead.blockID, 1);
     }*/
 
     /**
@@ -105,7 +103,7 @@ public class EntityWinterDeer extends EntityAnimal
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.dropItem(LotsOMobs.DeerFur, 1);
+            this.dropItem(LotsOMobsItems.DeerFur, 1);
         }
         
         int var7 = this.rand.nextInt(5) + this.rand.nextInt(1 + par2);
@@ -113,7 +111,7 @@ public class EntityWinterDeer extends EntityAnimal
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.dropItem(LotsOMobs.Horn, 2);
+            this.dropItem(LotsOMobsItems.Horn, 2);
         }
 
         var3 = this.rand.nextInt(3) + 1 + this.rand.nextInt(1 + par2);
@@ -122,11 +120,11 @@ public class EntityWinterDeer extends EntityAnimal
         {
             if (this.isBurning())
             {
-                this.dropItem(LotsOMobs.Venison, 1);
+                this.dropItem(LotsOMobsItems.Venison, 1);
             }
             else
             {
-                this.dropItem(LotsOMobs.RawVenison, 1);
+                this.dropItem(LotsOMobsItems.RawVenison, 1);
             }
         }
     }

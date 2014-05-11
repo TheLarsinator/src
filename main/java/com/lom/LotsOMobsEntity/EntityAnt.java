@@ -16,7 +16,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityAnt extends EntityAnimal
 {
@@ -45,7 +45,7 @@ public class EntityAnt extends EntityAnimal
     }
     protected Item getDropItem()
     {
-    	return LotsOMobs.SmashedBug;
+    	return LotsOMobsItems.SmashedBug;
     }
     
     /**

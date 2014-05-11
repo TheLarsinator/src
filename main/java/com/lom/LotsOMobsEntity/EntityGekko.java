@@ -1,6 +1,5 @@
 package com.lom.lotsomobsentity;
 
-import net.minecraft.block.Block;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIControlledByPlayer;
@@ -16,11 +15,10 @@ import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.stats.AchievementList;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityGekko extends EntityAnimal
 {
@@ -103,7 +101,7 @@ public class EntityGekko extends EntityAnimal
      */
     protected Item getDropItem()
     {
-        return this.isBurning() ? LotsOMobs.ReptileMeat : LotsOMobs.RawReptile;
+        return this.isBurning() ? LotsOMobsItems.ReptileMeat : LotsOMobsItems.RawReptile;
     }
 
     /**
@@ -117,11 +115,11 @@ public class EntityGekko extends EntityAnimal
         {
             if (this.isBurning())
             {
-                this.dropItem(LotsOMobs.ReptileMeat, 1);
+                this.dropItem(LotsOMobsItems.ReptileMeat, 1);
             }
             else
             {
-                this.dropItem(LotsOMobs.RawReptile, 1);
+                this.dropItem(LotsOMobsItems.RawReptile, 1);
             }
         }
     }

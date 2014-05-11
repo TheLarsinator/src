@@ -19,7 +19,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityLion extends EntityAgeableMob
 {
@@ -145,7 +145,7 @@ public class EntityLion extends EntityAgeableMob
      */
     protected void playStepSound(int par1, int par2, int par3, int par4)
     {
-        this.playSound("LotsOMobs.TRexFootstep", 0.15F, 1.0F);
+        this.playSound("LotsOMobsItems.TRexFootstep", 0.15F, 1.0F);
     }
 
     /**
@@ -153,15 +153,15 @@ public class EntityLion extends EntityAgeableMob
      */
     protected void dropFewItems(boolean par1, int par2)
     {
-     this.dropItem(LotsOMobs.DeerFur, 2);
+     this.dropItem(LotsOMobsItems.DeerFur, 2);
      {
          if (this.isBurning())
          {
-             this.dropItem(LotsOMobs.LionMeat, 1);
+             this.dropItem(LotsOMobsItems.LionMeat, 1);
          }
          else
          {
-             this.dropItem(LotsOMobs.RawLion, 1);
+             this.dropItem(LotsOMobsItems.RawLion, 1);
          }
      }
     }

@@ -7,7 +7,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsBlocks;
 
 public class WorldGenMineableIce extends WorldGenerator
 {
@@ -20,7 +20,7 @@ public class WorldGenMineableIce extends WorldGenerator
 
     public WorldGenMineableIce(Block p_i45459_1_, int p_i45459_2_)
     {
-        this(p_i45459_1_, p_i45459_2_, LotsOMobs.IceStone);
+        this(p_i45459_1_, p_i45459_2_, LotsOMobsBlocks.IceStone);
     }
 
     public WorldGenMineableIce(Block p_i45460_1_, int p_i45460_2_, Block p_i45460_3_)

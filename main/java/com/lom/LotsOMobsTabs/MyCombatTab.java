@@ -4,7 +4,7 @@ package com.lom.lotsomobstabs;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class MyCombatTab extends CreativeTabs
 {
@@ -15,6 +15,6 @@ public class MyCombatTab extends CreativeTabs
 
 	@Override
 	public Item getTabIconItem() {
-		return LotsOMobs.HornSword;
+		return LotsOMobsItems.HornSword;
 	}
 }

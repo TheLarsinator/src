@@ -1,7 +1,6 @@
     package com.lom.lotsomobsentity;
 
-    import net.minecraft.block.BlockColored;
-import net.minecraft.entity.Entity;
+    import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -14,25 +13,20 @@ import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAITargetNonTamed;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
-import net.minecraft.entity.monster.EntityCreeper;
-import net.minecraft.entity.monster.EntityGhast;
 import net.minecraft.entity.passive.EntityAnimal;
-import net.minecraft.entity.passive.EntityHorse;
 import net.minecraft.entity.passive.EntityTameable;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.pathfinding.PathEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 import com.lom.lotsomobsai.EntityDigAI;
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -187,11 +181,11 @@ import cpw.mods.fml.relauncher.SideOnly;
             {
                 if (this.isBurning())
                 {
-                    this.dropItem(LotsOMobs.CookedFrog, 1);
+                    this.dropItem(LotsOMobsItems.CookedFrog, 1);
                 }
                 else
                 {
-                    this.dropItem(LotsOMobs.RawFrog, 1);
+                    this.dropItem(LotsOMobsItems.RawFrog, 1);
                 }
             }
         }
@@ -409,7 +403,7 @@ import cpw.mods.fml.relauncher.SideOnly;
                     this.setAttackTarget((EntityLivingBase)null);
                 }
             }
-            else if (itemstack != null && itemstack.getItem() == LotsOMobs.SmashedBug && !this.isAngry())
+            else if (itemstack != null && itemstack.getItem() == LotsOMobsItems.SmashedBug && !this.isAngry())
             {
                 if (!par1EntityPlayer.capabilities.isCreativeMode)
                 {

@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityNarwal extends EntityWaterMob 
 {
@@ -82,7 +82,7 @@ public class EntityNarwal extends EntityWaterMob
      */
     protected Item getDropItem()
     {
-        return LotsOMobs.Ivory;
+        return LotsOMobsItems.Ivory;
     }
 
     /**
@@ -91,8 +91,8 @@ public class EntityNarwal extends EntityWaterMob
     protected void dropFewItems(boolean par1, int par2)
     {
         {
-            this.entityDropItem(new ItemStack(LotsOMobs.RawWhale, 1, 0), 0.0F);
-            this.entityDropItem(new ItemStack(LotsOMobs.Ivory, 1, 0), 0.0F);
+            this.entityDropItem(new ItemStack(LotsOMobsItems.RawWhale, 1, 0), 0.0F);
+            this.entityDropItem(new ItemStack(LotsOMobsItems.Ivory, 1, 0), 0.0F);
         }
     }
 

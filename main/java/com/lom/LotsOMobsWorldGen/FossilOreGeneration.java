@@ -6,7 +6,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsBlocks;
 
 import cpw.mods.fml.common.IWorldGenerator;
 
@@ -39,7 +39,7 @@ int randPosX = chunkX + rand.nextInt(16);
 int randPosY = rand.nextInt(64);
 int randPosZ = chunkZ + rand.nextInt(16);
 
-(new WorldGenMinable(LotsOMobs.FossilOre, 4)).generate(world, rand,
+(new WorldGenMinable(LotsOMobsBlocks.FossilOre, 4)).generate(world, rand,
 randPosX, randPosY, randPosZ);
 }
 }

@@ -1,7 +1,4 @@
 package com.lom.lotsomobsitems;
-import com.lom.lotsomobscore.LotsOMobs;
-
-import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -10,6 +7,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+
+import com.lom.lotsomobsinit.LotsOMobsBlocks;
 public class ItemPortalPlacer extends Item
 {
 public ItemPortalPlacer()
@@ -59,7 +58,7 @@ par3World.setBlock(X, Y + 7, Z, Blocks.mossy_cobblestone);
 par3World.setBlock(X + 1, Y + 7, Z, Blocks.mossy_cobblestone);
 par3World.setBlock(X, Y + 6, Z, Blocks.mossy_cobblestone);
 par3World.setBlock(X + 1, Y + 6, Z, Blocks.mossy_cobblestone);
-par3World.setBlock(X, Y + 3, Z, LotsOMobs.AncientFire);
+par3World.setBlock(X, Y + 3, Z, LotsOMobsBlocks.AncientFire);
 }
 else
 {
@@ -98,7 +97,7 @@ par3World.setBlock(X, Y + 7, Z, Blocks.mossy_cobblestone);
 par3World.setBlock(X + 1, Y + 7, Z, Blocks.mossy_cobblestone);
 par3World.setBlock(X, Y + 6, Z, Blocks.mossy_cobblestone);
 par3World.setBlock(X + 1, Y + 6, Z, Blocks.mossy_cobblestone);
-par3World.setBlock(X, Y + 3, Z, LotsOMobs.AncientFire);
+par3World.setBlock(X, Y + 3, Z, LotsOMobsBlocks.AncientFire);
 }
 return true;
 }

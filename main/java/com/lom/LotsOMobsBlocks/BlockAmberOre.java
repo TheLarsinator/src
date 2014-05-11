@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 
 import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -22,7 +23,7 @@ public BlockAmberOre(int par1, int par2)
 
 public Item getItemDropped(int par1, Random par2Random, int par3)
 {
-         return LotsOMobs.Amber;
+         return LotsOMobsItems.Amber;
 }
 @Override
 @SideOnly(Side.CLIENT)

@@ -9,7 +9,7 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntityButterfly extends EntityFlying implements IMob
 {
@@ -138,7 +138,7 @@ public class EntityButterfly extends EntityFlying implements IMob
      */
     protected Item getDropItem()
     {
-    	return LotsOMobs.SmashedBug;
+    	return LotsOMobsItems.SmashedBug;
     }
 
 

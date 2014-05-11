@@ -14,7 +14,7 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobsinit.LotsOMobsItems;
 
 public class EntitySanta extends EntityFlying implements IMob
 {
@@ -107,7 +107,7 @@ public class EntitySanta extends EntityFlying implements IMob
     public boolean canBeSteered()
     {
         ItemStack var1 = ((EntityPlayer)this.riddenByEntity).getHeldItem();
-        return var1 != null && var1.getItem() == LotsOMobs.CactiOnAStick;
+        return var1 != null && var1.getItem() == LotsOMobsItems.CactiOnAStick;
     }
 
     protected void entityInit()
@@ -219,7 +219,7 @@ public class EntitySanta extends EntityFlying implements IMob
      */
     protected Item getDropItem()
     {
-        return LotsOMobs.Horn;
+        return LotsOMobsItems.Horn;
     }
     
 
@@ -229,23 +229,23 @@ public class EntitySanta extends EntityFlying implements IMob
    protected void dropFewItems(boolean par1, int par2)
     {
     	{
-    		this.dropItem(LotsOMobs.SantaLeggings, 1);
+    		this.dropItem(LotsOMobsItems.SantaLeggings, 1);
     	}
     	{
-    		this.dropItem(LotsOMobs.SantaBoots, 1);
+    		this.dropItem(LotsOMobsItems.SantaBoots, 1);
     	}
     	{
-    		this.dropItem(LotsOMobs.SantaHelmet, 1);
+    		this.dropItem(LotsOMobsItems.SantaHelmet, 1);
     	}
     	{
-    		this.dropItem(LotsOMobs.SantaChestplate, 1);
+    		this.dropItem(LotsOMobsItems.SantaChestplate, 1);
     	}
 
         {
-            this.dropItem(LotsOMobs.RawVenison, 2);
+            this.dropItem(LotsOMobsItems.RawVenison, 2);
         }
        {
-            this.dropItem(LotsOMobs.Horn, 4);
+            this.dropItem(LotsOMobsItems.Horn, 4);
         }
     }
 
