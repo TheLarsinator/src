@@ -11,6 +11,7 @@ import com.lom.lotsomobscore.LotsOMobs;
 import com.lom.lotsomobscore.LotsOMobsProxy;
 import com.lom.lotsomobscrops.ItemMyFoodSeed;
 import com.lom.lotsomobsitems.IceTimeTraveler;
+import com.lom.lotsomobsitems.Item3DArmor;
 import com.lom.lotsomobsitems.ItemCactiOnAStick;
 import com.lom.lotsomobsitems.ItemDNA;
 import com.lom.lotsomobsitems.ItemEasterCake;
@@ -92,6 +93,7 @@ public class LotsOMobsItems
 		public static  Item IcemintuimSword;
 		public static  Item IcemintuimHoe;
 		
+		public static  Item FurHelmet1;
 		public static  Item FurHelmet;
 		public static  Item FurChestplate;
 		public static  Item FurLeggings;
@@ -140,9 +142,11 @@ public class LotsOMobsItems
 		public static  Item DNASab;
 		public static  Item DNAIch;
 
+		public static  Item DNASolvent;
+
 	public static void Init()
 	{
-		DeerFur = new ItemMaterials().setTextureName(modid + ":DeerFur").setUnlocalizedName("DeerFur");
+		 DeerFur = new ItemMaterials().setTextureName(modid + ":DeerFur").setUnlocalizedName("DeerFur");
 		 Horn = new ItemMaterials().setTextureName(modid + ":Horn").setUnlocalizedName("Horn");
 		 AngoraWool = new ItemMaterials().setTextureName(modid + ":AngoraWool").setUnlocalizedName("AngoraWool");
 		 Ivory = new ItemMaterials().setTextureName(modid + ":Ivory").setUnlocalizedName("Ivory");
@@ -205,7 +209,9 @@ public class LotsOMobsItems
 		 DNAMam = new ItemDNA().setUnlocalizedName("DNAMam").setTextureName(modid + ":DNAMam");
 		 DNASab = new ItemDNA().setUnlocalizedName("DNASab").setTextureName(modid + ":DNASab");
 		 DNAIch = new ItemDNA().setUnlocalizedName("DNAIch").setTextureName(modid + ":DNAIch");
-		 
+
+		 DNASolvent = new ItemDNA().setUnlocalizedName("DNASolvent").setTextureName(modid + ":DNASolvent");
+
 		 HornSword = (new ItemSword(LotsOMobs.EnumToolMaterialHorn)).setUnlocalizedName("HornSword").setTextureName(modid + ":HornSword").setCreativeTab(LotsOMobs.LotsOMobsCombatTab);
 		 AmberPickaxe = (new ItemMyPickaxe(LotsOMobs.EnumToolMaterialAmber)).setUnlocalizedName("AmberPickaxe").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":AmberPickaxe"); ;
 		 AmberAxe = (new ItemMyAxe(LotsOMobs.EnumToolMaterialAmber)).setUnlocalizedName("AmberAxe").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":AmberAxe"); ;
@@ -217,13 +223,15 @@ public class LotsOMobsItems
 		 IvoryAxe = (new ItemMyAxe(LotsOMobs.EnumToolMaterialIvory)).setUnlocalizedName("IvoryAxe").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":IvoryAxe"); ;
 		 IvoryShovel = (new ItemMyShovel(LotsOMobs.EnumToolMaterialIvory)).setUnlocalizedName("IvoryShovel").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":IvoryShovel"); ;
 		 IvorySword = (new ItemSword(LotsOMobs.EnumToolMaterialIvory)).setUnlocalizedName("IvorySword").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":IvorySword"); ;
-		 IvoryHoe = (new ItemHoe( LotsOMobs.EnumToolMaterialIvory)).setUnlocalizedName("IvoryHoe").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":IvoryHoe"); ;
-
-		 FurHelmet = new ItemArmor(LotsOMobs.Fur, proxy.addArmor("FurArmor"), 0).setUnlocalizedName("FurHelmet").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":FurHelmet");;
-		 FurChestplate = new ItemArmor( LotsOMobs.Fur, proxy.addArmor("FurArmor"), 1).setUnlocalizedName("FurChest").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":FurChest");;
-		 FurLeggings = new ItemArmor(LotsOMobs.Fur, proxy.addArmor("FurArmor"), 2).setUnlocalizedName("FurLeggings").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":FurLeggings");;
-		 FurBoots = new ItemArmor(LotsOMobs.Fur, proxy.addArmor("FurArmor"), 3).setUnlocalizedName("FurBoots").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":FurBoots");;
-		//Christmas Special
+		 IvoryHoe = (new ItemHoe( LotsOMobs.EnumToolMaterialIvory)).setUnlocalizedName("IvoryHoe").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":IvoryHoe"); ;		 
+		 
+		 FurHelmet1 = new ItemArmor(LotsOMobs.Fur, proxy.addArmor("FurArmor"), 0).setUnlocalizedName("FurHelmet1").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":FurHelmet1");;
+		 FurHelmet = new Item3DArmor(LotsOMobs.Fur, proxy.addArmor("FurArmor"), 0).setUnlocalizedName("FurHelmet").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":FurHelmet");;
+		 FurChestplate = new Item3DArmor( LotsOMobs.Fur, proxy.addArmor("FurArmor"), 1).setUnlocalizedName("FurChest").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":FurChest");;
+		 FurLeggings = new Item3DArmor(LotsOMobs.Fur, proxy.addArmor("FurArmor"), 2).setUnlocalizedName("FurLeggings").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":FurLeggings");;
+		 FurBoots = new Item3DArmor(LotsOMobs.Fur, proxy.addArmor("FurArmor"), 3).setUnlocalizedName("FurBoots").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":FurBoots");;
+	 
+		 //Christmas Special
 		 SantaHelmet = new ItemArmor(LotsOMobs.Santa, proxy.addArmor("SantaArmor"), 0).setUnlocalizedName("SantaHelmet").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":SantaHelmet");
 		 SantaChestplate = new ItemArmor(LotsOMobs.Santa, proxy.addArmor("SantaArmor"), 1).setUnlocalizedName("SantaChest").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":SantaChest");
 		 SantaLeggings = new ItemArmor(LotsOMobs.Santa, proxy.addArmor("SantaArmor"), 2).setUnlocalizedName("SantaLegging").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":SantaLegging");
@@ -295,6 +303,7 @@ public class LotsOMobsItems
 		 GameRegistry.registerItem(DNAMam, "DNAMam", modid);
 		 GameRegistry.registerItem(DNASab, "DNASab", modid);
 		 GameRegistry.registerItem(DNAIch, "DNAIch", modid);
+		 GameRegistry.registerItem(DNASolvent, "DNASolvent", modid);
 		 
 		 
 		 GameRegistry.registerItem(RawVenison, "Raw_Venison", modid);
@@ -333,6 +342,7 @@ public class LotsOMobsItems
 		 GameRegistry.registerItem(IvoryHoe, "IvoryHoe", modid);
 		 
 		 GameRegistry.registerItem(FurHelmet, "FurHelmet", modid);
+		 GameRegistry.registerItem(FurHelmet1, "FurHelmet1", modid);
 		 GameRegistry.registerItem(FurChestplate, "FurChestplate", modid);
 		 GameRegistry.registerItem(FurLeggings, "FurLeggings", modid);
 		 GameRegistry.registerItem(FurBoots, "FurBoots", modid);

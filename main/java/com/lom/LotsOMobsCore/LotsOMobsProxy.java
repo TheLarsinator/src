@@ -1,6 +1,6 @@
 package com.lom.lotsomobscore;
 
-import net.minecraftforge.client.MinecraftForgeClient;
+import net.minecraft.client.model.ModelBiped;
 
 public class LotsOMobsProxy
 {
@@ -16,5 +16,10 @@ public class LotsOMobsProxy
 		public int addArmor(String string)
 		{
 			return 0;
+		}
+		
+		public ModelBiped getArmorModel(int id)
+		{
+			return null;
 		}
 }

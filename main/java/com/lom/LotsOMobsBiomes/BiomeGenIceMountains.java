@@ -14,8 +14,8 @@ public class BiomeGenIceMountains extends BiomeGenBase
         this.waterColorMultiplier = -13395457;
         this.setHeight(height_MidHills);
         this.spawnableCreatureList.clear();
-        this.topBlock = Blocks.snow;
-        this.fillerBlock = LotsOMobsBlocks.IceStone;
+        this.topBlock = Blocks.glass;
+        this.fillerBlock = Blocks.planks;
         this.getEnableSnow();
         this.setTemperatureRainfall(0.1F, 17F);       
         this.spawnableMonsterList.clear();

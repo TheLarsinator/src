@@ -1,10 +1,13 @@
 package com.lom.lotsomobsinit;
 
 import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.entity.passive.EntityCow;
+import net.minecraft.entity.passive.EntityHorse;
+import net.minecraft.entity.passive.EntityPig;
+import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.world.biome.BiomeGenBase;
 
 import com.lom.lotsomobscore.ConfigDetails;
-import com.lom.lotsomobscore.LotsOMobs;
 import com.lom.lotsomobsentity.EntityAnt;
 import com.lom.lotsomobsentity.EntityBear;
 import com.lom.lotsomobsentity.EntityBee;
@@ -63,6 +66,13 @@ public class LotsOMobsMobs
 	public static void Init()
 	{
 		//Mobs
+//Temporary fix for missing vanilla creature spawn:
+        EntityRegistry.addSpawn(EntityCow.class, 20, 1, 4, EnumCreatureType.creature, new BiomeGenBase[] {BiomeGenBase.forest, BiomeGenBase.forestHills, BiomeGenBase.plains, BiomeGenBase.icePlains});
+        EntityRegistry.addSpawn(EntityPig.class, 20, 1, 4, EnumCreatureType.creature, new BiomeGenBase[] {BiomeGenBase.forest, BiomeGenBase.forestHills, BiomeGenBase.plains, BiomeGenBase.icePlains});
+        EntityRegistry.addSpawn(EntitySheep.class, 20, 1, 4, EnumCreatureType.creature, new BiomeGenBase[] {BiomeGenBase.forest, BiomeGenBase.forestHills, BiomeGenBase.plains, BiomeGenBase.icePlains});
+        EntityRegistry.addSpawn(EntityHorse.class, 20, 1, 4, EnumCreatureType.creature, new BiomeGenBase[] {BiomeGenBase.plains});
+
+
 				if(ConfigDetails.DeerOn == true)
 				{	
 				EntityRegistry.registerGlobalEntityID(EntityDeer.class, "Deer", EntityRegistry.findGlobalUniqueEntityId(), 0x7D3B0C, 0xB37346);

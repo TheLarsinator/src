@@ -1,15 +1,109 @@
 package com.lom.lotsomobsinit;
 
+import static com.lom.lotsomobsinit.LotsOMobsBlocks.DinoLog;
+import static com.lom.lotsomobsinit.LotsOMobsBlocks.DinoPortal;
+import static com.lom.lotsomobsinit.LotsOMobsBlocks.DinoWoodPlanks;
+import static com.lom.lotsomobsinit.LotsOMobsBlocks.DinoWoodStairs;
+import static com.lom.lotsomobsinit.LotsOMobsBlocks.EasterEgg1;
+import static com.lom.lotsomobsinit.LotsOMobsBlocks.EasterEgg2;
+import static com.lom.lotsomobsinit.LotsOMobsBlocks.EasterEgg3;
+import static com.lom.lotsomobsinit.LotsOMobsBlocks.EasterEgg4;
+import static com.lom.lotsomobsinit.LotsOMobsBlocks.EasterEgg5;
+import static com.lom.lotsomobsinit.LotsOMobsBlocks.IceIron;
+import static com.lom.lotsomobsinit.LotsOMobsBlocks.IcemintuimOre;
+import static com.lom.lotsomobsinit.LotsOMobsItems.Amber;
+import static com.lom.lotsomobsinit.LotsOMobsItems.*;
+import static com.lom.lotsomobsinit.LotsOMobsItems.AmberAxe;
+import static com.lom.lotsomobsinit.LotsOMobsItems.AmberBoots;
+import static com.lom.lotsomobsinit.LotsOMobsItems.AmberChestplate;
+import static com.lom.lotsomobsinit.LotsOMobsItems.AmberHelmet;
+import static com.lom.lotsomobsinit.LotsOMobsItems.AmberHoe;
+import static com.lom.lotsomobsinit.LotsOMobsItems.AmberLeggings;
+import static com.lom.lotsomobsinit.LotsOMobsItems.AmberPickaxe;
+import static com.lom.lotsomobsinit.LotsOMobsItems.AmberShovel;
+import static com.lom.lotsomobsinit.LotsOMobsItems.AmberSword;
+import static com.lom.lotsomobsinit.LotsOMobsItems.BoarMeat;
+import static com.lom.lotsomobsinit.LotsOMobsItems.CactiOnAStick;
+import static com.lom.lotsomobsinit.LotsOMobsItems.CamelMeat;
+import static com.lom.lotsomobsinit.LotsOMobsItems.CookedFrog;
+import static com.lom.lotsomobsinit.LotsOMobsItems.DNABro;
+import static com.lom.lotsomobsinit.LotsOMobsItems.DNAIch;
+import static com.lom.lotsomobsinit.LotsOMobsItems.DNAMam;
+import static com.lom.lotsomobsinit.LotsOMobsItems.DNAPte;
+import static com.lom.lotsomobsinit.LotsOMobsItems.DNARap;
+import static com.lom.lotsomobsinit.LotsOMobsItems.DNARex;
+import static com.lom.lotsomobsinit.LotsOMobsItems.DNASab;
+import static com.lom.lotsomobsinit.LotsOMobsItems.DNASolvent;
+import static com.lom.lotsomobsinit.LotsOMobsItems.DNATri;
+import static com.lom.lotsomobsinit.LotsOMobsItems.DeerFur;
+import static com.lom.lotsomobsinit.LotsOMobsItems.DinoBone;
+import static com.lom.lotsomobsinit.LotsOMobsItems.DinoFur;
+import static com.lom.lotsomobsinit.LotsOMobsItems.DinoFurBoots;
+import static com.lom.lotsomobsinit.LotsOMobsItems.DinoFurChestplate;
+import static com.lom.lotsomobsinit.LotsOMobsItems.DinoFurHelmet;
+import static com.lom.lotsomobsinit.LotsOMobsItems.DinoFurLeggings;
+import static com.lom.lotsomobsinit.LotsOMobsItems.EasterCake1;
+import static com.lom.lotsomobsinit.LotsOMobsItems.EasterCake2;
+import static com.lom.lotsomobsinit.LotsOMobsItems.EasterCake3;
+import static com.lom.lotsomobsinit.LotsOMobsItems.EasterCake4;
+import static com.lom.lotsomobsinit.LotsOMobsItems.EasterCake5;
+import static com.lom.lotsomobsinit.LotsOMobsItems.EskimoBoots;
+import static com.lom.lotsomobsinit.LotsOMobsItems.EskimoChestplate;
+import static com.lom.lotsomobsinit.LotsOMobsItems.EskimoHelmet;
+import static com.lom.lotsomobsinit.LotsOMobsItems.EskimoLeggings;
+import static com.lom.lotsomobsinit.LotsOMobsItems.FlintAndFossil;
+import static com.lom.lotsomobsinit.LotsOMobsItems.FossilBro;
+import static com.lom.lotsomobsinit.LotsOMobsItems.FossilIch;
+import static com.lom.lotsomobsinit.LotsOMobsItems.FossilMam;
+import static com.lom.lotsomobsinit.LotsOMobsItems.FossilPte;
+import static com.lom.lotsomobsinit.LotsOMobsItems.FossilRap;
+import static com.lom.lotsomobsinit.LotsOMobsItems.FossilRex;
+import static com.lom.lotsomobsinit.LotsOMobsItems.FossilSab;
+import static com.lom.lotsomobsinit.LotsOMobsItems.FossilTri;
+import static com.lom.lotsomobsinit.LotsOMobsItems.FurBoots;
+import static com.lom.lotsomobsinit.LotsOMobsItems.FurChestplate;
+import static com.lom.lotsomobsinit.LotsOMobsItems.FurHelmet;
+import static com.lom.lotsomobsinit.LotsOMobsItems.FurLeggings;
+import static com.lom.lotsomobsinit.LotsOMobsItems.Horn;
+import static com.lom.lotsomobsinit.LotsOMobsItems.HornSword;
+import static com.lom.lotsomobsinit.LotsOMobsItems.IcemintuimAxe;
+import static com.lom.lotsomobsinit.LotsOMobsItems.IcemintuimBar;
+import static com.lom.lotsomobsinit.LotsOMobsItems.IcemintuimBoots;
+import static com.lom.lotsomobsinit.LotsOMobsItems.IcemintuimChestplate;
+import static com.lom.lotsomobsinit.LotsOMobsItems.IcemintuimHelmet;
+import static com.lom.lotsomobsinit.LotsOMobsItems.IcemintuimHoe;
+import static com.lom.lotsomobsinit.LotsOMobsItems.IcemintuimLeggings;
+import static com.lom.lotsomobsinit.LotsOMobsItems.IcemintuimPickaxe;
+import static com.lom.lotsomobsinit.LotsOMobsItems.IcemintuimShovel;
+import static com.lom.lotsomobsinit.LotsOMobsItems.IcemintuimSword;
+import static com.lom.lotsomobsinit.LotsOMobsItems.Ivory;
+import static com.lom.lotsomobsinit.LotsOMobsItems.IvoryAxe;
+import static com.lom.lotsomobsinit.LotsOMobsItems.IvoryBlade;
+import static com.lom.lotsomobsinit.LotsOMobsItems.IvoryHoe;
+import static com.lom.lotsomobsinit.LotsOMobsItems.IvoryPickaxe;
+import static com.lom.lotsomobsinit.LotsOMobsItems.IvoryShovel;
+import static com.lom.lotsomobsinit.LotsOMobsItems.IvorySword;
+import static com.lom.lotsomobsinit.LotsOMobsItems.LionMeat;
+import static com.lom.lotsomobsinit.LotsOMobsItems.RawBoar;
+import static com.lom.lotsomobsinit.LotsOMobsItems.RawCamel;
+import static com.lom.lotsomobsinit.LotsOMobsItems.RawFrog;
+import static com.lom.lotsomobsinit.LotsOMobsItems.RawLion;
+import static com.lom.lotsomobsinit.LotsOMobsItems.RawReptile;
+import static com.lom.lotsomobsinit.LotsOMobsItems.RawVenison;
+import static com.lom.lotsomobsinit.LotsOMobsItems.RawWhale;
+import static com.lom.lotsomobsinit.LotsOMobsItems.ReptileMeat;
+import static com.lom.lotsomobsinit.LotsOMobsItems.TimeTraveler;
+import static com.lom.lotsomobsinit.LotsOMobsItems.Venison;
+import static com.lom.lotsomobsinit.LotsOMobsItems.WhaleMeat;
+import static com.lom.lotsomobsinit.LotsOMobsItems.WildStew;
+import static com.lom.lotsomobsinit.LotsOMobsItems.WoolyFur;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobscore.ConfigDetails;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-
-import static com.lom.lotsomobsinit.LotsOMobsBlocks.*;
-import static com.lom.lotsomobsinit.LotsOMobsItems.*;
 
 public class LotsOMobsRecipes 
 {
@@ -62,7 +156,20 @@ public class LotsOMobsRecipes
 		 GameRegistry.addShapelessRecipe(new ItemStack(FlintAndFossil, 1), new Object[]{ Items.flint, FossilPte });
 		 GameRegistry.addShapelessRecipe(new ItemStack(FlintAndFossil, 1), new Object[]{ Items.flint, FossilMam });
 		 GameRegistry.addShapelessRecipe(new ItemStack(FlintAndFossil, 1), new Object[]{ Items.flint, FossilIch });
+
+		 GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, ConfigDetails.TriceratopsID), new Object[]{ Items.egg, DNATri });
+		 GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, ConfigDetails.BrontosaurusID), new Object[]{ Items.egg, DNABro });
+		 GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, ConfigDetails.RaptorID), new Object[]{ Items.egg, DNARap });
+		 GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, ConfigDetails.TRexID), new Object[]{ Items.egg, DNARex });
+		 GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, ConfigDetails.PterosaurusID), new Object[]{ Items.egg, DNAPte});
+		 GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, ConfigDetails.IchtyosaurusID), new Object[]{ Items.egg, DNAIch });
+		 GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, ConfigDetails.MammothID), new Object[]{ Items.egg, DNAMam });
+		 GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, ConfigDetails.SaberToothID), new Object[]{ Items.egg, DNASab });
 		 
+		 GameRegistry.addRecipe(new ItemStack(LotsOMobsBlocks.DNAExtractor, 1), new Object [] {"###", "XGA", "#C#", Character.valueOf('X'), IcemintuimBar,Character.valueOf('A'), Amber, Character.valueOf('G'), Blocks.glass, Character.valueOf('#'), Items.iron_ingot, Character.valueOf('C'), Items.cauldron});
+		 GameRegistry.addRecipe(new ItemStack(LotsOMobsBlocks.DNAExtractor, 1), new Object [] {"###", "AGX", "#C#", Character.valueOf('X'), IcemintuimBar,Character.valueOf('A'), Amber, Character.valueOf('G'), Blocks.glass, Character.valueOf('#'), Items.iron_ingot, Character.valueOf('C'), Items.cauldron});
+		 GameRegistry.addRecipe(new ItemStack(DNASolvent, 1), new Object [] {"#", "X", Character.valueOf('X'), Items.potionitem, Character.valueOf('#'), Blocks.tallgrass});
+
 		 GameRegistry.addRecipe(new ItemStack(Items.stick, 4), new Object [] {"#", "#", Character.valueOf('#'), DinoWoodPlanks});
 		 GameRegistry.addRecipe(new ItemStack(DinoWoodPlanks, 4), new Object [] {"#", Character.valueOf('#'), DinoLog});	 
 		 GameRegistry.addRecipe(new ItemStack(Items.wooden_pickaxe, 1), new Object [] {"###", " X ", " X ", Character.valueOf('#'), DinoWoodPlanks, Character.valueOf('X'), Items.stick});
@@ -83,7 +190,8 @@ public class LotsOMobsRecipes
 		 GameRegistry.addRecipe(new ItemStack(EasterCake4, 1), new Object [] {"###", "XCX", "ZZZ", Character.valueOf('#'), Items.milk_bucket, Character.valueOf('X'), Items.sugar, Character.valueOf('C'), EasterEgg4, Character.valueOf('Z'), Items.wheat});
 		 GameRegistry.addRecipe(new ItemStack(EasterCake5, 1), new Object [] {"###", "XCX", "ZZZ", Character.valueOf('#'), Items.milk_bucket, Character.valueOf('X'), Items.sugar, Character.valueOf('C'), EasterEgg5, Character.valueOf('Z'), Items.wheat});
 
-		 GameRegistry.addRecipe(new ItemStack(FurHelmet, 1), new Object [] {"###", "# #", Character.valueOf('#'), DeerFur});
+		 GameRegistry.addRecipe(new ItemStack(FurHelmet1, 1), new Object [] {"###", "# #", Character.valueOf('#'), DeerFur});
+		 GameRegistry.addRecipe(new ItemStack(FurHelmet, 1), new Object [] {"# #", " Q ", Character.valueOf('#'), Horn, Character.valueOf('Q'), FurHelmet1});
 		 GameRegistry.addRecipe(new ItemStack(FurChestplate, 1), new Object [] {"# #", "###", "###", Character.valueOf('#'), DeerFur});
 		 GameRegistry.addRecipe(new ItemStack(FurLeggings, 1), new Object [] {"###", "# #", "# #", Character.valueOf('#'), DeerFur});
 		 GameRegistry.addRecipe(new ItemStack(FurBoots, 1), new Object [] {"# #", "# #", Character.valueOf('#'), DeerFur});

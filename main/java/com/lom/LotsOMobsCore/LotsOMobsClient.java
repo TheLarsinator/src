@@ -1,5 +1,6 @@
 package com.lom.lotsomobscore;
 
+import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelChicken;
 
 import com.lom.lotsomobsentity.EntityAnt;
@@ -61,6 +62,7 @@ import com.lom.lotsomobsmodels.ModelBunny;
 import com.lom.lotsomobsmodels.ModelButterfly;
 import com.lom.lotsomobsmodels.ModelCamel;
 import com.lom.lotsomobsmodels.ModelDeer;
+import com.lom.lotsomobsmodels.ModelDeerArmor;
 import com.lom.lotsomobsmodels.ModelEasterBunny;
 import com.lom.lotsomobsmodels.ModelElephant;
 import com.lom.lotsomobsmodels.ModelFishy;
@@ -149,7 +151,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class LotsOMobsClient extends LotsOMobsProxy
 {
 
-	
+    private static final ModelDeerArmor Chest = new ModelDeerArmor(0.5F);
+    private static final ModelDeerArmor Legs = new ModelDeerArmor(0.5F);
+
 	
     @SideOnly(Side.CLIENT)
 	public void registerRenderInformation()
@@ -213,5 +217,18 @@ public class LotsOMobsClient extends LotsOMobsProxy
     
     public int addArmor(String armor){
     	return RenderingRegistry.addNewArmourRendererPrefix(armor);
-    } 
+    }
+    
+    public ModelBiped getArmorModel(int id)
+    {
+    	switch (id) {
+    	case 0:
+    	return Chest;
+    	case 1:
+    	return Legs;
+    	default:
+    	break;
+    	}
+    	return Chest;
+    }
 }

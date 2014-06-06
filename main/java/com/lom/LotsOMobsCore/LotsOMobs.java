@@ -10,6 +10,7 @@ import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.util.EnumHelper;
 
 import com.lom.lotsomobsachievement.LotsOMobsAchievements;
+import com.lom.lotsomobscore.handler.GuiHandler;
 import com.lom.lotsomobsinit.LotsOMobsAchievementsBook;
 import com.lom.lotsomobsinit.LotsOMobsBiomes;
 import com.lom.lotsomobsinit.LotsOMobsBlocks;
@@ -29,6 +30,7 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod (modid = "lom",name = "LotsOMobs", version = "version")
@@ -156,6 +158,7 @@ public class LotsOMobs
 	@EventHandler
 	public void load(FMLInitializationEvent event)
 	{	
+		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 		LotsOMobsMobs.Init();
 		LotsOMobsRecipes.RecipeBook();		
      	

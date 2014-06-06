@@ -22,7 +22,7 @@ this.hasNoSky = false;
 /** Dimension Name **/
 public String getDimensionName()
 {
-return "Tutorial";
+return "DinoWorld";
 }
 
 /** Get Provider for dimension **/
@@ -34,7 +34,7 @@ return DimensionManager.createProviderFor(ConfigDetails.dimension);
 /** Welcome message **/
 public String getWelcomeMessage()
 {
-return "Entering the Tutorial Dimension";
+return "Entering the Dinosaur Dimension";
 }
 
 /** What chunk provider to use **/
@@ -53,7 +53,7 @@ return false;
 // not sure if this works any more ?
 protected synchronized String setUserMessage(String par1Str)
 {
-return "Building Tutorial Dimension";
+return "Building Dinosaur Dimension";
 }
 
 /** Determines the dimension the player will be respawned in **/

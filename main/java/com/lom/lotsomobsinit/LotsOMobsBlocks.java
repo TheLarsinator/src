@@ -21,8 +21,11 @@ import com.lom.lotsomobsblocks.BlockIceStone;
 import com.lom.lotsomobsblocks.BlockIcemintuimOre;
 import com.lom.lotsomobsblocks.BlockMyFlower;
 import com.lom.lotsomobscore.ConfigDetails;
+import com.lom.lotsomobscore.LotsOMobs;
 import com.lom.lotsomobscrops.BlockPineApple;
 import com.lom.lotsomobscrops.BlockTomato;
+import com.lom.lotsomobsdna.BlockDNAExtractor;
+import com.lom.lotsomobsdna.TileEntityDNAExtractor;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -50,6 +53,7 @@ public class LotsOMobsBlocks
 		public static Block IcemintuimOre;
 		public static Block IceCoal;
 		public static Block IceIron;
+		public static Block DNAExtractor;
 
 		public static BlockMyFlower OrangeFlower;
 		public static BlockMyFlower Flowers;
@@ -105,7 +109,9 @@ public class LotsOMobsBlocks
 		EasterEgg3 = (new BlockEasterEgg().setBlockName("EasterEgg3").setHardness(0.5F).setResistance(0F));
 		EasterEgg4 = (new BlockEasterEgg().setBlockName("EasterEgg4").setHardness(0.5F).setResistance(0F));
 		EasterEgg5 = (new BlockEasterEgg().setBlockName("EasterEgg5").setHardness(0.5F).setResistance(0F));
-				
+		DNAExtractor = new BlockDNAExtractor(0, Material.iron, false).setBlockName("DNAExtractor").setHardness(5.0F).setResistance(10.0F).setCreativeTab(LotsOMobs.LotsOMobsBlockTab);;
+		
+		
 		//Register Blocks
 		GameRegistry.registerBlock(PineAppleBlock, "PineAppleBlock");
 		GameRegistry.registerBlock(TomatoBlock, "TomatoBlock");
@@ -128,6 +134,9 @@ public class LotsOMobsBlocks
 		GameRegistry.registerBlock(IceCoal, "IceCoal");
 		GameRegistry.registerBlock(IceIron, "IceIron");
 		GameRegistry.registerBlock(IcemintuimOre, "IcemintuimOre");
+		
+	    GameRegistry.registerBlock(DNAExtractor, "DNA Extractor");
+	    GameRegistry.registerTileEntity(TileEntityDNAExtractor.class, "DNAExtractorTE");
 
 		//Flowers
 		/*GameRegistry.registerBlock(OrangeFlower, "Orange Flower");
