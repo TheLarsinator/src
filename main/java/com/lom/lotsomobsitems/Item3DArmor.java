@@ -32,6 +32,10 @@ public class Item3DArmor extends ItemArmor
 	{
 	         return "lom:DeerArmor_2.png";
 	}
+	if(stack.getItem() == LotsOMobsItems.ElephantHelmet)
+	{
+		return "lom:ElephantArmor.png";
+	}
 	return null;
 	}
 	
@@ -44,12 +48,22 @@ public class Item3DArmor extends ItemArmor
 		{
 		if(itemStack.getItem() instanceof Item3DArmor)
 		{
+			if(itemStack.getItem() == LotsOMobsItems.FurBoots || itemStack.getItem() == LotsOMobsItems.FurChestplate || itemStack.getItem() == LotsOMobsItems.FurHelmet || itemStack.getItem() == LotsOMobsItems.FurLeggings)
+			{
 			int type = ((ItemArmor)itemStack.getItem()).armorType;
 
-			if(type == 1 || type == 3){
+			if(type == 1 || type == 3)
+			{
 			armorModel = LotsOMobs.proxy.getArmorModel(0);
-			}else{
+			}
+			else
+			{
 			armorModel = LotsOMobs.proxy.getArmorModel(1);
+			}
+			}
+			if(itemStack.getItem() == LotsOMobsItems.ElephantHelmet)
+			{
+			armorModel = LotsOMobs.proxy.getArmorModel(2);
 			}
 		}
 		if(armorModel != null){

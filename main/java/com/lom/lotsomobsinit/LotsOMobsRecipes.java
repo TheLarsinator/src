@@ -191,6 +191,7 @@ public class LotsOMobsRecipes
 		 GameRegistry.addRecipe(new ItemStack(EasterCake5, 1), new Object [] {"###", "XCX", "ZZZ", Character.valueOf('#'), Items.milk_bucket, Character.valueOf('X'), Items.sugar, Character.valueOf('C'), EasterEgg5, Character.valueOf('Z'), Items.wheat});
 
 		 GameRegistry.addRecipe(new ItemStack(FurHelmet1, 1), new Object [] {"###", "# #", Character.valueOf('#'), DeerFur});
+		 GameRegistry.addRecipe(new ItemStack(ElephantHelmet, 1), new Object [] {"###", "# #", "@#@", Character.valueOf('#'), ElephantHide, Character.valueOf('@'), Ivory});
 		 GameRegistry.addRecipe(new ItemStack(FurHelmet, 1), new Object [] {"# #", " Q ", Character.valueOf('#'), Horn, Character.valueOf('Q'), FurHelmet1});
 		 GameRegistry.addRecipe(new ItemStack(FurChestplate, 1), new Object [] {"# #", "###", "###", Character.valueOf('#'), DeerFur});
 		 GameRegistry.addRecipe(new ItemStack(FurLeggings, 1), new Object [] {"###", "# #", "# #", Character.valueOf('#'), DeerFur});

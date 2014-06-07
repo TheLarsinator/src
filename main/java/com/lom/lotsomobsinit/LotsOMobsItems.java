@@ -32,6 +32,7 @@ public class LotsOMobsItems
 	public static LotsOMobsProxy proxy;
 	//Items
 		public static Item DeerFur;
+		public static Item ElephantHide;
 		public static Item Horn;
 		public static Item Venison;
 		public static Item RawVenison;
@@ -98,6 +99,7 @@ public class LotsOMobsItems
 		public static  Item FurChestplate;
 		public static  Item FurLeggings;
 		public static  Item FurBoots;
+		public static  Item ElephantHelmet;
 		//Christmas Special
 		public static  Item SantaHelmet;
 		public static  Item SantaChestplate;
@@ -146,7 +148,9 @@ public class LotsOMobsItems
 
 	public static void Init()
 	{
+		 
 		 DeerFur = new ItemMaterials().setTextureName(modid + ":DeerFur").setUnlocalizedName("DeerFur");
+		 ElephantHide = new ItemMaterials().setTextureName(modid + ":ElephantHide").setUnlocalizedName("ElephantHide");
 		 Horn = new ItemMaterials().setTextureName(modid + ":Horn").setUnlocalizedName("Horn");
 		 AngoraWool = new ItemMaterials().setTextureName(modid + ":AngoraWool").setUnlocalizedName("AngoraWool");
 		 Ivory = new ItemMaterials().setTextureName(modid + ":Ivory").setUnlocalizedName("Ivory");
@@ -230,7 +234,8 @@ public class LotsOMobsItems
 		 FurChestplate = new Item3DArmor( LotsOMobs.Fur, proxy.addArmor("FurArmor"), 1).setUnlocalizedName("FurChest").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":FurChest");;
 		 FurLeggings = new Item3DArmor(LotsOMobs.Fur, proxy.addArmor("FurArmor"), 2).setUnlocalizedName("FurLeggings").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":FurLeggings");;
 		 FurBoots = new Item3DArmor(LotsOMobs.Fur, proxy.addArmor("FurArmor"), 3).setUnlocalizedName("FurBoots").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":FurBoots");;
-	 
+		 ElephantHelmet = new Item3DArmor(LotsOMobs.Fur, proxy.addArmor("ElephantArmor"), 0).setUnlocalizedName("ElephantHelmet").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":ElephantHelmet");;
+
 		 //Christmas Special
 		 SantaHelmet = new ItemArmor(LotsOMobs.Santa, proxy.addArmor("SantaArmor"), 0).setUnlocalizedName("SantaHelmet").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":SantaHelmet");
 		 SantaChestplate = new ItemArmor(LotsOMobs.Santa, proxy.addArmor("SantaArmor"), 1).setUnlocalizedName("SantaChest").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":SantaChest");
@@ -265,6 +270,7 @@ public class LotsOMobsItems
 		
 //Register Items
 		 GameRegistry.registerItem(DeerFur, "Deer_Fur", modid);
+		 GameRegistry.registerItem(ElephantHide, "ElephantHide", modid);
 		 GameRegistry.registerItem(Horn, "Horn", modid);
 		 GameRegistry.registerItem(AngoraWool, "AngoraWool", modid);
 		 GameRegistry.registerItem(Ivory, "Ivory", modid);
@@ -346,6 +352,8 @@ public class LotsOMobsItems
 		 GameRegistry.registerItem(FurChestplate, "FurChestplate", modid);
 		 GameRegistry.registerItem(FurLeggings, "FurLeggings", modid);
 		 GameRegistry.registerItem(FurBoots, "FurBoots", modid);
+		 GameRegistry.registerItem(ElephantHelmet, "ElephantHelmet", modid);
+
 		 GameRegistry.registerItem(SantaHelmet, "SantaHelmet", modid);
 		 GameRegistry.registerItem(SantaChestplate, "SantaChestplate", modid);
 		 GameRegistry.registerItem(SantaLeggings, "SantaLeggings", modid);

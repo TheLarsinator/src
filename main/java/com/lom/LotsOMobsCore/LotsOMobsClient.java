@@ -65,6 +65,7 @@ import com.lom.lotsomobsmodels.ModelDeer;
 import com.lom.lotsomobsmodels.ModelDeerArmor;
 import com.lom.lotsomobsmodels.ModelEasterBunny;
 import com.lom.lotsomobsmodels.ModelElephant;
+import com.lom.lotsomobsmodels.ModelElephantHelmet;
 import com.lom.lotsomobsmodels.ModelFishy;
 import com.lom.lotsomobsmodels.ModelFly;
 import com.lom.lotsomobsmodels.ModelFrog;
@@ -153,7 +154,7 @@ public class LotsOMobsClient extends LotsOMobsProxy
 
     private static final ModelDeerArmor Chest = new ModelDeerArmor(0.5F);
     private static final ModelDeerArmor Legs = new ModelDeerArmor(0.5F);
-
+    private static final ModelElephantHelmet HelmetE = new ModelElephantHelmet(0.5F);
 	
     @SideOnly(Side.CLIENT)
 	public void registerRenderInformation()
@@ -226,6 +227,8 @@ public class LotsOMobsClient extends LotsOMobsProxy
     	return Chest;
     	case 1:
     	return Legs;
+    	case 2:
+    	return HelmetE;
     	default:
     	break;
     	}

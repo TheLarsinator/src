@@ -391,10 +391,10 @@ import cpw.mods.fml.relauncher.SideOnly;
                             return true;
                         }
                     }
+                    return false;
+                	}
 
-                }
-
-                if (par1EntityPlayer.getCommandSenderName().equalsIgnoreCase(this.getOwnerName()) && !this.worldObj.isRemote && !this.isBreedingItem(itemstack))
+                if (par1EntityPlayer.getCommandSenderName().equalsIgnoreCase(this.getOwnerName()) && !this.worldObj.isRemote)
                 {
                     this.aiSit.setSitting(!this.isSitting());
                     this.isJumping = false;
@@ -587,6 +587,10 @@ import cpw.mods.fml.relauncher.SideOnly;
         public boolean canBreatheUnderwater()
         {
             return true;
+        }
+        public boolean isBreedingItem(ItemStack par1ItemStack)
+        {
+            return par1ItemStack.getItem() == Items.carrot;
         }
 
 }

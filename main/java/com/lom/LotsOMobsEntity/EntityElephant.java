@@ -109,7 +109,10 @@ public class EntityElephant extends EntityAnimal
     protected void dropFewItems(boolean par1, int par2)
     {
         {
-            this.dropItem(LotsOMobsItems.Ivory, 2);
+        	int I = rand.nextInt(4);
+        	int J = rand.nextInt(4);
+            this.dropItem(LotsOMobsItems.Ivory, J);
+            this.dropItem(LotsOMobsItems.ElephantHide, I);
         }
 
         {
